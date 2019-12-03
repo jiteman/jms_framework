@@ -1,16 +1,13 @@
 #pragma once
 
 
-#include "jmsf/encodebuba/platforming/compiler_detection.h"
+#include "jmsd/platform_support/platform_detection/compiler_detection.h"
 
 
-#if !defined( JMSF_MICROSOFT_VISUAL_CPP_COMPILER_IS_DETECTED )
+#if !defined( JMSD_MICROSOFT_VISUAL_CPP_COMPILER_IS_DETECTED )
 	#error This file "jmsf/ms_windows/temporary_windows_include.h" is included, but there is no MS Windows detected.
 
 #endif
-
-
-#include "jmsf/encodebuba/common_suppress_compilation_warnings.h"
 
 
 #pragma warning( push )
