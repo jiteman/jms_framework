@@ -28,10 +28,12 @@ endif()
 
 # testing and mocking framework
 add_subdirectory( cule )
+add_subdirectory( fakeit )
 #~testing and mocking framework
 
 # tests
 add_subdirectory( jmsf_tests_ )
+add_subdirectory( fakeit_tests_ )
 #~tests
 
 
