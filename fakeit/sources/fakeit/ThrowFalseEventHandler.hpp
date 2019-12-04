@@ -3,7 +3,7 @@
 //
 #pragma once
 
-#include "fakeit/EventHandler.hpp"
+#include "fakeit/EventHandler.h"
 
 namespace fakeit {
     class ThrowFalseEventHandler : public VerificationEventHandler {

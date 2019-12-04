@@ -16,7 +16,7 @@
 #include "fakeit/StubbingProgress.hpp"
 #include "fakeit/Sequence.hpp"
 #include "fakeit/ActualInvocation.hpp"
-#include "fakeit/EventHandler.hpp"
+#include "fakeit/EventHandler.h"
 #include "fakeit/ActionSequence.hpp"
 
 namespace fakeit {

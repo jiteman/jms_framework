@@ -13,7 +13,7 @@
 #include <iosfwd>
 #include <sstream>
 
-//#include "fakeit/DomainObjects.hpp"
+
 #include "fakeit/domain_objects/MethodInfo.h"
 #include "mockutils/Destructible.h"
 

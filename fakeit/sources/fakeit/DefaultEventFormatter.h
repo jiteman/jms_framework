@@ -8,7 +8,7 @@
 #pragma once
 
 
-#include "fakeit/EventFormatter.hpp"
+#include "fakeit/EventFormatter.h"
 #include "fakeit/Sequence.hpp"
 #include "fakeit/FakeitEvents.hpp"
 

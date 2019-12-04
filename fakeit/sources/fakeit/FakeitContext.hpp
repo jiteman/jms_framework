@@ -9,8 +9,8 @@
 #pragma once
 
 #include <vector>
-#include "fakeit/EventHandler.hpp"
-#include "fakeit/EventFormatter.hpp"
+#include "fakeit/EventHandler.h"
+#include "fakeit/EventFormatter.h"
 #ifdef FAKEIT_ASSERT_ON_UNEXPECTED_METHOD_INVOCATION
 #include <cassert>
 #endif
