@@ -2,10 +2,16 @@
 
 #include "VerificationEvent.h"
 
-#include "fakeit/Sequence.hpp"
+//#include "fakeit/Sequence.hpp"
+
+#include <vector>
 
 
 namespace fakeit {
+
+
+class Sequence;
+class Invocation;
 
 
 struct SequenceVerificationEvent : public VerificationEvent {

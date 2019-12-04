@@ -3,6 +3,10 @@
 #include "fakeit/DefaultFakeit.h"
 #include "mockutils/to_string.hpp"
 
+
+#include "mockutils/Macros.hpp"
+
+
 namespace fakeit {
 
     struct VerificationException : public std::exception {
