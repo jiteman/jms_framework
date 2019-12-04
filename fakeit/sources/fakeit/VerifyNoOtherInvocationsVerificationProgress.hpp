@@ -10,7 +10,7 @@
 
 //#include "fakeit/FakeitExceptions.hpp"
 #include "fakeit/FakeitContext.h"
-#include "fakeit/ThrowFalseEventHandler.hpp"
+//#include "fakeit/ThrowFalseEventHandler.hpp"
 
 namespace fakeit {
 
