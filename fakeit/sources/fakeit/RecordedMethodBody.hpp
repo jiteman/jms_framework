@@ -22,6 +22,8 @@
 #include "fakeit/actual_invocation_source/ActualInvocationsSource.h"
 #include "fakeit/actual_invocation_source/ActualInvocationsContainer.h"
 #include "fakeit/fakeit_exceptions/UnexpectedMethodCallException.h"
+#include "fakeit/fakeit_events/UnexpectedMethodCallEvent.h"
+#include "FakeitContext.h"
 
 
 namespace fakeit {

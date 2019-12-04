@@ -15,11 +15,17 @@
 #include "mockutils/type_utils.hpp"
 #include "mockutils/DynamicProxy.hpp"
 #include "fakeit/StubbingImpl.hpp"
-#include "fakeit/MethodMockingContext.hpp"
+//#include "fakeit/MethodMockingContext.hpp"
 #include "fakeit/domain_objects/MockObject.hpp"
+#include "fakeit/ActualInvocationHandler.hpp"
+
+#include "fakeit/method_mocking_context/MockingContext.hpp"
+#include "fakeit/method_mocking_context/DtorMockingContext.h"
+
 #include "fakeit/domain_objects/UnknownMethod.h"
 #include "fakeit/FakeitContext.h"
-#include "fakeit/ActualInvocationHandler.hpp"
+
+
 
 namespace fakeit {
 
