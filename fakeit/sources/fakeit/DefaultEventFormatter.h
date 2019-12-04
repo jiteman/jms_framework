@@ -9,8 +9,7 @@
 
 
 #include "fakeit/EventFormatter.h"
-#include "fakeit/Sequence.hpp"
-//#include "fakeit/FakeitEvents.hpp"
+#include "fakeit/Sequences.hpp"
 #include "fakeit/fakeit_events/VerificationType.h"
 
 #include <vector>

@@ -7,15 +7,10 @@
  */
 #pragma once
 
-#include <set>
-#include "fakeit/StubbingImpl.hpp"
-#include "fakeit/StubbingProgress.hpp"
-#include "fakeit/Sequence.hpp"
+#include "fakeit/Sequences.hpp"
 #include "fakeit/InvocationUtils.h"
-//#include "fakeit/UsingFunctor.hpp"
 #include "fakeit/UsingProgress.h"
 #include "fakeit/FakeitContext.h"
-//#include "fakeit/SequenceVerificationProgress.hpp"
 
 #include "fakeit/actual_invocation_source/AggregateInvocationsSource.h"
 
