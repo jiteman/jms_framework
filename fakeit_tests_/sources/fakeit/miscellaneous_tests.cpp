@@ -12,6 +12,8 @@
 #include "tpunit++.hpp"
 #include "fakeit.hpp"
 
+#include <iostream>
+
 using namespace fakeit;
 
 struct Miscellaneous : tpunit::TestFixture
@@ -316,7 +318,7 @@ struct Miscellaneous : tpunit::TestFixture
 	public:
 		virtual std::unique_ptr<Product>Create() = 0;
 	};
-		
+
 	void aaa()
 	{
 		Mock<IFactory> factory;

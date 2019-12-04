@@ -1,6 +1,6 @@
 #pragma once
 
-#include "fakeit/DefaultFakeit.hpp"
+#include "fakeit/DefaultFakeit.h"
 #include "mockutils/to_string.hpp"
 
 namespace fakeit {

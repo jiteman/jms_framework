@@ -1,5 +1,7 @@
 #include "StandaloneFakeit.h"
 
+#include "fakeit/FakeitExceptions.hpp"
+
 
 namespace fakeit {
 
