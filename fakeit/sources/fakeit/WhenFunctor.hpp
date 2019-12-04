@@ -15,7 +15,7 @@
 
 #include "mockutils/smart_ptr.hpp"
 #include "mockutils/Destructible.h"
-#include "Xaction.hpp"
+#include "Xaction.h"
 
 namespace fakeit {
 

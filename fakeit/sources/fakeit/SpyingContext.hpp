@@ -3,13 +3,13 @@
  * Copyright (c) 2014 Eran Pe'er.
  *
  * This program is made available under the terms of the MIT License.
- * 
+ *
  * Created on Oct 20, 2014
  */
 #pragma once
 
 #include "mockutils/type_utils.hpp"
-#include "fakeit/Xaction.hpp"
+#include "fakeit/Xaction.h"
 
 namespace fakeit {
 
