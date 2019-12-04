@@ -1,7 +1,7 @@
 #include "MatchAnalysis.h"
 
 #include "InvocationUtils.h"
-#include "Sequences.h"
+#include "Sequence.h"
 
 #include "fakeit/actual_invocation_source/InvocationsSourceProxy.h"
 

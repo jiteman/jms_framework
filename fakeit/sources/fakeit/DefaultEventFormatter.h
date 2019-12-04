@@ -9,7 +9,6 @@
 
 
 #include "fakeit/EventFormatter.h"
-#include "fakeit/Sequences.h"
 #include "fakeit/fakeit_events/VerificationType.h"
 
 #include <vector>
@@ -17,28 +16,38 @@
 
 namespace fakeit {
 
-    struct DefaultEventFormatter : public EventFormatter {
 
-        virtual std::string format(const UnexpectedMethodCallEvent &e) override;
+class Sequence;
+class ConcatenatedSequence;
+class RepeatedSequence;
 
-        /*
-         test file:1: Verification error\n
-         Expected pattern: mock.all_types( 'a', true, 1, 1, 1, 1, 1, 1, 1.0, 1.0 )
-         Expected matches: exactly 2
-         Actual matches  : 0
-         Actual sequence : no actual invocations
-         */
-        virtual std::string format(const SequenceVerificationEvent &e) override;
+class Invocation;
 
-        virtual std::string format(const NoMoreInvocationsVerificationEvent &e) override;
 
-        static std::string formatExpectedPattern(const std::vector<fakeit::Sequence *> &expectedPattern);
+struct DefaultEventFormatter : public EventFormatter {
 
-    private:
-        static std::string formatSequence(const Sequence &val);
-        static void formatExpectedCount(std::ostream &out, fakeit::VerificationType verificationType, int expectedCount);
-        static void formatInvocationList(std::ostream &out, const std::vector<fakeit::Invocation *> &actualSequence);
-        static std::string format(const ConcatenatedSequence &val);
-        static std::string format(const RepeatedSequence &val);
-    };
+	virtual std::string format(const UnexpectedMethodCallEvent &e) override;
+
+	/*
+	 test file:1: Verification error\n
+	 Expected pattern: mock.all_types( 'a', true, 1, 1, 1, 1, 1, 1, 1.0, 1.0 )
+	 Expected matches: exactly 2
+	 Actual matches  : 0
+	 Actual sequence : no actual invocations
+	 */
+	virtual std::string format(const SequenceVerificationEvent &e) override;
+
+	virtual std::string format(const NoMoreInvocationsVerificationEvent &e) override;
+
+	static std::string formatExpectedPattern(const std::vector<fakeit::Sequence *> &expectedPattern);
+
+private:
+	static std::string formatSequence(const Sequence &val);
+	static void formatExpectedCount(std::ostream &out, fakeit::VerificationType verificationType, int expectedCount);
+	static void formatInvocationList(std::ostream &out, const std::vector<fakeit::Invocation *> &actualSequence);
+	static std::string format(const ConcatenatedSequence &val);
+	static std::string format(const RepeatedSequence &val);
+};
+
+
 }

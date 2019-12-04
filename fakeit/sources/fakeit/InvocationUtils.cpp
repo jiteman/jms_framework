@@ -2,7 +2,7 @@
 
 #include "fakeit/actual_invocation_source/ActualInvocationsSource.h"
 #include "Invocation.h"
-#include "Sequences.h"
+#include "Sequence.h"
 
 #include <set>
 

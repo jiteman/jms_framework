@@ -4,6 +4,12 @@
 #include "fakeit/fakeit_events/SequenceVerificationEvent.h"
 #include "fakeit/fakeit_events/NoMoreInvocationsVerificationEvent.h"
 
+#include "Invocation.h"
+#include "ConcatenatedSequence.h"
+#include "RepeatedSequence.h"
+
+#include <sstream>
+
 
 namespace fakeit {
 
