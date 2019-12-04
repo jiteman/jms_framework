@@ -8,7 +8,7 @@
  */
 #pragma once
 
-#include <exception>
+//#include <exception>
 
 #include "RefCount.h"
 #include "mockutils/Macros.hpp"

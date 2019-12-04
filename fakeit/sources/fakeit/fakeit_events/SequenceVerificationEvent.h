@@ -2,8 +2,6 @@
 
 #include "VerificationEvent.h"
 
-//#include "fakeit/Sequence.hpp"
-
 #include <vector>
 
 

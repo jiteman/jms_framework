@@ -11,7 +11,9 @@
 #include "fakeit/EventFormatter.h"
 #include "fakeit/fakeit_events/VerificationType.h"
 
+#include <string>
 #include <vector>
+#include <ostream>
 
 
 namespace fakeit {

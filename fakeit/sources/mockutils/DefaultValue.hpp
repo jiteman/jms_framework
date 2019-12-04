@@ -7,8 +7,8 @@
  */
 #pragma once
 
-#include <type_traits>
-#include <typeinfo>
+//#include <type_traits>
+//#include <typeinfo>
 #include "mockutils/type_utils.hpp"
 #include "DefaultValueException.h"
 

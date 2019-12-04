@@ -1,5 +1,7 @@
 #include "MethodInfo.h"
 
+#include <atomic>
+
 
 namespace fakeit {
 

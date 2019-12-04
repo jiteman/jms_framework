@@ -7,6 +7,8 @@
 #include "UsingProgress.h"
 #include "InvocationUtils.h"
 
+#include <vector>
+
 
 namespace fakeit {
 

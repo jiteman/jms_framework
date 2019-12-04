@@ -3,6 +3,7 @@
 #include "ActualInvocationsSource.h"
 
 #include <vector>
+#include <unordered_set>
 
 
 namespace fakeit {

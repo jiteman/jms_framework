@@ -7,16 +7,6 @@
  */
 #pragma once
 
-#include <functional>
-#include <utility>
-#include <type_traits>
-#include <tuple>
-#include <memory>
-#include <vector>
-#include <unordered_set>
-#include <set>
-#include <iosfwd>
-
 #include "fakeit/RecordedMethodBody.hpp"
 #include "fakeit/StubbingProgress.hpp"
 #include "fakeit/Sequence.h"
@@ -29,6 +19,10 @@
 #include "fakeit/StubbingContext.hpp"
 #include "fakeit/MatchersCollector.hpp"
 #include "mockutils/type_utils.hpp"
+
+#include <string>
+#include <functional>
+
 
 namespace fakeit {
 /**

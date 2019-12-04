@@ -7,17 +7,6 @@
  */
 #pragma once
 
-#include <functional>
-#include <type_traits>
-#include <memory>
-#include <iosfwd>
-
-//#include "fakeit/RecordedMethodBody.hpp"
-//#include "fakeit/StubbingProgress.hpp"
-//#include "fakeit/Sequence.hpp"
-//#include "fakeit/ActualInvocation.hpp"
-//#include "fakeit/EventHandler.h"
-//#include "fakeit/ActionSequence.hpp"
 
 namespace fakeit {
 

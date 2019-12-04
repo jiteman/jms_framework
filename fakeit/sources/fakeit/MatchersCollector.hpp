@@ -7,16 +7,13 @@
  */
 #pragma once
 
-#include <functional>
-#include <type_traits>
-#include <tuple>
-#include <memory>
-#include <vector>
-#include <unordered_set>
-
 #include "mockutils/Destructible.h"
 #include "mockutils/type_utils.hpp"
 #include "fakeit/argument_matchers.hpp"
+
+#include <vector>
+#include <tuple>
+
 
 namespace fakeit {
 

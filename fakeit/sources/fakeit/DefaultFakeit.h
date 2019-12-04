@@ -5,9 +5,6 @@
  *
  * Created on Mar 10, 2014
  */
-//#include "fakeit/EventHandler.hpp"
-// #include "fakeit/FakeitContext.hpp"
-//#include "fakeit/DefaultEventLogger.h"
 #include "fakeit/DefaultEventFormatter.h"
 #include "fakeit/AbstractFakeit.h"
 

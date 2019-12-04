@@ -2,6 +2,8 @@
 
 #include "Sequence.h"
 
+#include <vector>
+
 
 namespace fakeit {
 

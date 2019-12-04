@@ -8,9 +8,12 @@
  */
 #pragma once
 
-#include "mockutils/type_utils.hpp"
+
 #include "fakeit/Xaction.h"
 #include "Action.hpp"
+#include "mockutils/type_utils.hpp"
+
+#include <functional>
 
 
 namespace fakeit {

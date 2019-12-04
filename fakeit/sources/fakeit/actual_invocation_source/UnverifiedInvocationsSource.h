@@ -4,6 +4,8 @@
 
 #include "InvocationsSourceProxy.h"
 
+#include <unordered_set>
+
 
 namespace fakeit {
 

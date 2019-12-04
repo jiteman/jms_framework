@@ -3,15 +3,10 @@
  * Copyright (c) 2014 Eran Pe'er.
  *
  * This program is made available under the terms of the MIT License.
- * 
+ *
  * Created on Aug 12, 2014
  */
 #pragma once
-
-#include <functional>
-#include <tuple>
-#include <string>
-#include <iosfwd>
 
 #include "mockutils/TupleDispatcher.hpp"
 #include "mockutils/TuplePrinter.hpp"
@@ -19,6 +14,10 @@
 #include "mockutils/type_utils.hpp"
 #include "fakeit/ActualInvocation.hpp"
 #include "fakeit/argument_matchers.hpp"
+
+#include <vector>
+#include <sstream>
+
 
 namespace fakeit {
 
@@ -159,7 +158,7 @@ namespace fakeit {
         }
 
     private:
-        
+
         virtual bool matches(const ArgumentsTuple<arglist...>&) {
             return true;
         }

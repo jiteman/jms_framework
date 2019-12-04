@@ -6,6 +6,9 @@
 #include "fakeit/FakeitContext.h"
 #include "fakeit/SequenceVerificationProgress.h"
 
+#include <vector>
+
+
 namespace fakeit {
 
     class UsingProgress {

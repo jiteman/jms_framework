@@ -8,16 +8,13 @@
  */
 #pragma once
 
-#include <functional>
-#include <atomic>
-#include <tuple>
-#include <type_traits>
-
 #include "mockutils/DefaultValue.hpp"
 #include "mockutils/Destructible.h"
 #include "mockutils/type_utils.hpp"
 #include "mockutils/TupleDispatcher.hpp"
-//#include "fakeit/FakeitExceptions.hpp"
+
+#include <functional>
+
 
 namespace fakeit {
 

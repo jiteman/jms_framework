@@ -7,8 +7,6 @@
  */
 #pragma once
 
-//#include "fakeit/FakeitEvents.hpp"
-
 #include "fakeit/fakeit_events/SequenceVerificationEvent.h"
 #include "fakeit/fakeit_events/NoMoreInvocationsVerificationEvent.h"
 #include "fakeit/fakeit_events/UnexpectedMethodCallEvent.h"

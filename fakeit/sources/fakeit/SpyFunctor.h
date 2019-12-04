@@ -7,8 +7,7 @@
  */
 #pragma once
 
-//#include "fakeit/StubbingProgress.hpp"
-//#include "fakeit/StubbingImpl.hpp"
+
 #include "fakeit/SpyingContext.hpp"
 
 namespace fakeit {

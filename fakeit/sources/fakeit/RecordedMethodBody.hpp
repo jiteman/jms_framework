@@ -7,16 +7,11 @@
  */
 #pragma once
 
-#include <vector>
-#include <functional>
-#include <tuple>
 
 #include "mockutils/TupleDispatcher.hpp"
 #include "fakeit/ActualInvocation.hpp"
 #include "fakeit/ActualInvocationHandler.hpp"
 #include "fakeit/invocation_matchers.hpp"
-//#include "fakeit/FakeitEvents.hpp"
-//#include "fakeit/FakeitExceptions.hpp"
 #include "mockutils/MethodInvocationHandler.hpp"
 
 #include "fakeit/actual_invocation_source/ActualInvocationsSource.h"
@@ -24,6 +19,8 @@
 #include "fakeit/fakeit_exceptions/UnexpectedMethodCallException.h"
 #include "fakeit/fakeit_events/UnexpectedMethodCallEvent.h"
 #include "FakeitContext.h"
+
+#include <memory>
 
 
 namespace fakeit {

@@ -13,7 +13,8 @@
 
 #include "mockutils/Macros.hpp"
 
-#include <atomic>
+#include <string>
+
 
 namespace fakeit {
 

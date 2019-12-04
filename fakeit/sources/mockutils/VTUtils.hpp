@@ -8,10 +8,11 @@
  */
 #pragma once
 
-#include <functional>
-#include <type_traits>
 #include "mockutils/untemplate_VirtualOffestSelector.hpp"
 #include "mockutils/union_cast.hpp"
+
+#include <stdexcept>
+
 
 namespace fakeit {
     class NoVirtualDtor : public std::runtime_error {

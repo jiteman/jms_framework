@@ -7,14 +7,14 @@
  */
 #pragma once
 
-//#include <set>
 
-// #include "fakeit/Sequence.hpp"
 #include "fakeit/InvocationUtils.h"
 #include "fakeit/FakeitContext.h"
 #include "fakeit/UsingProgress.h"
 
 #include "fakeit/actual_invocation_source/AggregateInvocationsSource.h"
+
+#include <vector>
 
 
 namespace fakeit {

@@ -3,12 +3,12 @@
  * Copyright (c) 2014 Eran Pe'er.
  *
  * This program is made available under the terms of the MIT License.
- * 
+ *
  * Created on Jun 8, 2014
  */
 #pragma once
 
-#include <new>
+//#include <new>
 #include "mockutils/VirtualTable.hpp"
 
 namespace fakeit {

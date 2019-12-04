@@ -8,7 +8,6 @@
  */
 #pragma once
 
-#include <vector>
 
 #include "fakeit/ActualInvocation.hpp"
 #include "fakeit/Action.hpp"
@@ -17,6 +16,10 @@
 
 #include "mockutils/Finally.h"
 #include "mockutils/MethodInvocationHandler.hpp"
+
+#include <vector>
+#include <memory>
+
 
 namespace fakeit {
 

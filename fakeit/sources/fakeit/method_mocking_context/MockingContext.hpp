@@ -9,6 +9,8 @@
 
 #include "MethodMockingContext.hpp"
 
+#include <functional>
+
 
 namespace fakeit {
 

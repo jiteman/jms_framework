@@ -7,13 +7,13 @@
  */
 #pragma once
 
-#undef max
-#include <functional>
-#include <type_traits>
-#include <vector>
-#include <array>
-#include <new>
-#include <limits>
+//#undef max
+//#include <functional>
+//#include <type_traits>
+//#include <vector>
+//#include <array>
+//#include <new>
+//#include <limits>
 
 #include "mockutils/VirtualTable.hpp"
 #include "mockutils/union_cast.hpp"

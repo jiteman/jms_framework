@@ -6,13 +6,12 @@
  * Created on Mar 10, 2014
  */
 
-#include <string>
-#include <queue>
-
 #include "tpunit++.hpp"
 #include "fakeit.hpp"
 
 #include <iostream>
+#include <set>
+
 
 using namespace fakeit;
 

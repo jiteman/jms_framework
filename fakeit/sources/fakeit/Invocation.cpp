@@ -1,13 +1,7 @@
 #include "Invocation.h"
 
-//#include <typeinfo>
-//#include <tuple>
-//#include <string>
-//#include <iosfwd>
-//#include <sstream>
+#include <atomic>
 
-
-//#include "fakeit/domain_objects/MethodInfo.h"
 
 namespace fakeit {
 

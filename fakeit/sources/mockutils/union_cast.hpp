@@ -6,6 +6,8 @@
  * Created on Mar 10, 2014
  */
 #pragma once
+
+
 namespace fakeit {
 
     template<typename TARGET, typename SOURCE>

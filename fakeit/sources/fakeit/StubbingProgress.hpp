@@ -7,16 +7,10 @@
  */
 #pragma once
 
-#include <functional>
-#include <type_traits>
-#include <stdexcept>
-#include <utility>
-
 #include "mockutils/DefaultValue.hpp"
 #include "mockutils/Macros.hpp"
 #include "mockutils/type_utils.hpp"
 
-//#include "fakeit/FakeitExceptions.hpp"
 #include "fakeit/ActualInvocation.hpp"
 #include "fakeit/Quantifier.hpp"
 #include "fakeit/Action.hpp"

@@ -8,9 +8,11 @@
 
 #pragma once
 
-#include <vector>
 #include "fakeit/EventHandler.h"
 #include "fakeit/EventFormatter.h"
+
+#include <string>
+#include <vector>
 
 
 namespace fakeit {

@@ -4,6 +4,7 @@
 #include "ActualInvocationsSource.h"
 
 #include <memory>
+#include <unordered_set>
 
 
 namespace fakeit {

@@ -8,18 +8,13 @@
 
 #pragma once
 
-#include <typeinfo>
-#include <unordered_set>
-#include <tuple>
-#include <string>
-#include <iosfwd>
-#include <atomic>
+#include "fakeit/Invocation.h"
+#include "mockutils/Macros.hpp"
+#include "mockutils/TuplePrinter.hpp"
 #include "mockutils/type_utils.hpp"
 
-
-#include "mockutils/Macros.hpp"
-#include "fakeit/Invocation.h"
-#include "mockutils/TuplePrinter.hpp"
+#include <string>
+#include <ostream>
 
 
 namespace fakeit {

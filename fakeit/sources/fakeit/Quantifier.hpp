@@ -10,9 +10,6 @@
 #include "Quantity.h"
 
 
-#include <functional>
-#include <type_traits>
-
 namespace fakeit {
 
 	extern Quantity _once_;

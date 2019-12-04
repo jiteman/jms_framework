@@ -2,6 +2,8 @@
 
 #include "FakeitException.h"
 
+#include <string>
+
 
 namespace fakeit {
 

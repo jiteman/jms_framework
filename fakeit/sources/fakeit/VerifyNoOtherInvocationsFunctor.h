@@ -7,14 +7,12 @@
  */
 #pragma once
 
-//#include "fakeit/StubbingImpl.hpp"
-//#include "fakeit/StubbingProgress.hpp"
-//#include "fakeit/Sequence.hpp"
-//#include "fakeit/UsingFunctor.hpp"
 
 #include "fakeit/VerifyNoOtherInvocationsVerificationProgress.h"
 #include "fakeit/FakeitContext.h"
 #include "fakeit/InvocationUtils.h"
+
+#include <vector>
 
 
 namespace fakeit {

@@ -14,15 +14,16 @@
 
 #include "fakeit/actual_invocation_source/AggregateInvocationsSource.h"
 
+#include <vector>
+
+
 namespace fakeit {
 
     class VerifyFunctor {
 
         FakeitContext &_fakeit;
 
-
     public:
-
         VerifyFunctor(FakeitContext &fakeit);
 
         template<typename ... list>

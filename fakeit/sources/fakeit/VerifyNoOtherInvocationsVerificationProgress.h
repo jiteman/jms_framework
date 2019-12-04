@@ -12,7 +12,7 @@
 #include "mockutils/smart_ptr.hpp"
 #include "mockutils/Macros.hpp"
 
-#include <memory>
+#include <vector>
 
 
 namespace fakeit {

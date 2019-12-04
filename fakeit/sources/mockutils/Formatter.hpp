@@ -7,8 +7,11 @@
  */
 #pragma once
 
-#include <ostream>
+
 #include "mockutils/type_utils.hpp"
+
+#include <sstream>
+
 
 namespace fakeit {
 

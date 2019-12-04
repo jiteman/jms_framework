@@ -7,15 +7,9 @@
  */
 #pragma once
 
-#include <type_traits>
-#include <unordered_set>
-
-#include <memory>
-
 #include "mockutils/type_utils.hpp"
 #include "mockutils/DynamicProxy.hpp"
 #include "fakeit/StubbingImpl.hpp"
-//#include "fakeit/MethodMockingContext.hpp"
 #include "fakeit/domain_objects/MockObject.hpp"
 #include "fakeit/ActualInvocationHandler.hpp"
 
@@ -24,7 +18,6 @@
 
 #include "fakeit/domain_objects/UnknownMethod.h"
 #include "fakeit/FakeitContext.h"
-
 
 
 namespace fakeit {
