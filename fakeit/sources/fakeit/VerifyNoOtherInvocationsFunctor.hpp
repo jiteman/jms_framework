@@ -15,11 +15,11 @@
 #include "fakeit/Sequence.hpp"
 #include "fakeit/InvocationUtils.h"
 #include "fakeit/UsingFunctor.hpp"
-#include "fakeit/VerifyNoOtherInvocationsVerificationProgress.hpp"
 
-#include "mockutils/smart_ptr.hpp"
-#include "mockutils/Macros.hpp"
+#include "fakeit/VerifyNoOtherInvocationsVerificationProgress.h"
 #include "fakeit/FakeitContext.h"
+#include "mockutils/Macros.hpp"
+#include "mockutils/smart_ptr.hpp"
 
 namespace fakeit {
     class VerifyNoOtherInvocationsFunctor {
