@@ -16,7 +16,7 @@
 #include "mockutils/Macros.hpp"
 #include "mockutils/type_utils.hpp"
 
-#include "fakeit/FakeitExceptions.hpp"
+//#include "fakeit/FakeitExceptions.hpp"
 #include "fakeit/ActualInvocation.hpp"
 #include "fakeit/Quantifier.hpp"
 #include "fakeit/Action.hpp"
@@ -141,7 +141,7 @@ namespace fakeit {
 
         MethodStubbingProgress<void, arglist...> &Return() {
             auto lambda = [](const typename fakeit::test_arg<arglist>::type...) -> void {
-                return DefaultValue<void>::value(); 
+                return DefaultValue<void>::value();
             };
             return Do(lambda);
         }

@@ -7,17 +7,12 @@
  */
 #pragma once
 
-#include <functional>
-#include <memory>
+//#include "fakeit/FakeitEvents.hpp"
 
-#include "fakeit/Sequence.hpp"
+#include <exception>
 
 
 namespace fakeit {
-
-
-
-
 
 
 

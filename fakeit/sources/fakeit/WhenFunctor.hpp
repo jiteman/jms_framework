@@ -10,7 +10,8 @@
 #include "fakeit/StubbingImpl.hpp"
 #include "fakeit/StubbingProgress.hpp"
 #include "fakeit/FakeitContext.h"
-#include "fakeit/FakeitExceptions.hpp"
+//#include "fakeit/FakeitExceptions.hpp"
+#include "fakeit/fakeit_exceptions/UncaughtException.h"
 
 #include "mockutils/smart_ptr.hpp"
 #include "mockutils/Destructible.h"

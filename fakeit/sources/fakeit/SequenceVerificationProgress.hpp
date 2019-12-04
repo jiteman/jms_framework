@@ -1,7 +1,7 @@
 #pragma once
 
 #include <memory>
-#include "fakeit/FakeitExceptions.hpp"
+//#include "fakeit/FakeitExceptions.hpp"
 #include "fakeit/SequenceVerificationExpectation.hpp"
 #include "fakeit/ThrowFalseEventHandler.hpp"
 #include "mockutils/smart_ptr.hpp"

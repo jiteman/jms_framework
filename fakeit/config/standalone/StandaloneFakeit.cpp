@@ -1,6 +1,7 @@
 #include "StandaloneFakeit.h"
 
-#include "fakeit/FakeitExceptions.hpp"
+//#include "fakeit/FakeitExceptions.hpp"
+#include "fakeit/fakeit_exceptions/UnexpectedMethodCallException.h"
 
 
 namespace fakeit {

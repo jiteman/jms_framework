@@ -17,7 +17,7 @@
 #include "mockutils/Destructible.h"
 #include "mockutils/type_utils.hpp"
 #include "mockutils/TupleDispatcher.hpp"
-#include "fakeit/FakeitExceptions.hpp"
+//#include "fakeit/FakeitExceptions.hpp"
 
 namespace fakeit {
 
