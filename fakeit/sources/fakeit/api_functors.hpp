@@ -1,15 +1,15 @@
 #pragma once
 
-#include "fakeit/UsingFunctor.hpp"
-//#include "fakeit/VerifyFunctor.hpp"
-#include "fakeit/VerifyNoOtherInvocationsFunctor.h"
+
 #include "fakeit/SpyFunctor.hpp"
 #include "fakeit/FakeFunctor.hpp"
-#include "fakeit/WhenFunctor.h"
 //#include "fakeit/UnverifiedFunctor.hpp"
 
 #include "fakeit/VerifyFunctor.h"
 #include "fakeit/UnverifiedFunctor.h"
+#include "fakeit/UsingFunctor.h"
+#include "fakeit/VerifyNoOtherInvocationsFunctor.h"
+#include "fakeit/WhenFunctor.h"
 
 
 namespace fakeit {

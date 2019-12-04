@@ -3,7 +3,7 @@
 #include "fakeit/Mock.hpp"
 #include "fakeit/WhenFunctor.h"
 #include "fakeit/FakeFunctor.hpp"
-#include "fakeit/UsingFunctor.hpp"
+#include "fakeit/UsingFunctor.h"
 #include "fakeit/VerifyFunctor.h"
 #include "fakeit/VerifyNoOtherInvocationsFunctor.h"
 #include "fakeit/SpyFunctor.hpp"

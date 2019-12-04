@@ -7,9 +7,9 @@
  */
 #pragma once
 
-#include <set>
+//#include <set>
 
-#include "fakeit/Sequence.hpp"
+// #include "fakeit/Sequence.hpp"
 #include "fakeit/InvocationUtils.h"
 #include "fakeit/FakeitContext.h"
 #include "fakeit/UsingProgress.h"
@@ -27,9 +27,7 @@ namespace fakeit {
 
     public:
 
-        UsingFunctor(FakeitContext &fakeit) : _fakeit(fakeit) {
-        }
-
+        UsingFunctor(FakeitContext &fakeit);
         template<typename ... list>
         UsingProgress operator()(const ActualInvocationsSource &head, const list &... tail) {
             std::vector<ActualInvocationsSource *> allMocks{&InvocationUtils::remove_const(head),
