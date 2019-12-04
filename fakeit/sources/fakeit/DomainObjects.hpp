@@ -7,6 +7,9 @@
  */
 #pragma once
 
+#include "mockutils/Macros.hpp"
+
+#include <atomic>
 #include <string>
 
 namespace fakeit {
@@ -15,7 +18,7 @@ namespace fakeit {
 
     template<typename C>
     struct MockObject {
-        virtual ~MockObject() THROWS { };
+        virtual ~MockObject() THROWS { }
 
         virtual C &get() = 0;
 

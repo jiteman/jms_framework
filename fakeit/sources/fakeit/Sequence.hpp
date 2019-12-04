@@ -13,7 +13,7 @@
 
 #include "mockutils/Macros.hpp"
 #include "fakeit/ActualInvocation.hpp"
-#include "fakeit/ActualInvocationsSource.hpp"
+#include "fakeit/ActualInvocationsSource.h"
 
 namespace fakeit {
 
