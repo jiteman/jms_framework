@@ -1,7 +1,7 @@
 #pragma once
 
 #include "fakeit/Mock.hpp"
-#include "fakeit/WhenFunctor.hpp"
+#include "fakeit/WhenFunctor.h"
 #include "fakeit/FakeFunctor.hpp"
 #include "fakeit/UsingFunctor.hpp"
 #include "fakeit/VerifyFunctor.h"

@@ -5,7 +5,7 @@
 #include "fakeit/VerifyNoOtherInvocationsFunctor.h"
 #include "fakeit/SpyFunctor.hpp"
 #include "fakeit/FakeFunctor.hpp"
-#include "fakeit/WhenFunctor.hpp"
+#include "fakeit/WhenFunctor.h"
 //#include "fakeit/UnverifiedFunctor.hpp"
 
 #include "fakeit/VerifyFunctor.h"
