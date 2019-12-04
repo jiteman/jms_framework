@@ -14,7 +14,7 @@
 #include "fakeit/SortInvocations.hpp"
 #include "fakeit/UsingFunctor.hpp"
 #include "fakeit/UsingProgress.hpp"
-#include "fakeit/FakeitContext.hpp"
+#include "fakeit/FakeitContext.h"
 #include "fakeit/SequenceVerificationProgress.hpp"
 
 namespace fakeit {

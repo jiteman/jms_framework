@@ -18,7 +18,7 @@
 #include "fakeit/MethodMockingContext.hpp"
 #include "fakeit/domain_objects/MockObject.hpp"
 #include "fakeit/domain_objects/UnknownMethod.h"
-#include "fakeit/FakeitContext.hpp"
+#include "fakeit/FakeitContext.h"
 #include "fakeit/ActualInvocationHandler.hpp"
 
 namespace fakeit {

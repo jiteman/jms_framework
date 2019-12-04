@@ -3,13 +3,13 @@
  * Copyright (c) 2014 Eran Pe'er.
  *
  * This program is made available under the terms of the MIT License.
- * 
+ *
  * Created on Jul 21, 2014
  */
 #pragma once
 
 #include "fakeit/FakeitExceptions.hpp"
-#include "fakeit/FakeitContext.hpp"
+#include "fakeit/FakeitContext.h"
 #include "fakeit/ThrowFalseEventHandler.hpp"
 
 namespace fakeit {

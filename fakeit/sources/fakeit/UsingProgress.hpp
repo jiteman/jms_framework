@@ -3,7 +3,7 @@
 //
 #pragma once
 
-#include "fakeit/FakeitContext.hpp"
+#include "fakeit/FakeitContext.h"
 #include "fakeit/SequenceVerificationProgress.hpp"
 
 namespace fakeit {

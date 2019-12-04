@@ -9,7 +9,7 @@
 
 #include "fakeit/StubbingImpl.hpp"
 #include "fakeit/StubbingProgress.hpp"
-#include "fakeit/FakeitContext.hpp"
+#include "fakeit/FakeitContext.h"
 #include "fakeit/FakeitExceptions.hpp"
 
 #include "mockutils/smart_ptr.hpp"

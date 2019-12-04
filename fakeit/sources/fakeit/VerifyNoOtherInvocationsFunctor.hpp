@@ -19,7 +19,7 @@
 
 #include "mockutils/smart_ptr.hpp"
 #include "mockutils/Macros.hpp"
-#include "fakeit/FakeitContext.hpp"
+#include "fakeit/FakeitContext.h"
 
 namespace fakeit {
     class VerifyNoOtherInvocationsFunctor {

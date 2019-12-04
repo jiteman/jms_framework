@@ -2,7 +2,7 @@
 
 #include "mockutils/smart_ptr.hpp"
 #include "fakeit/FakeitExceptions.hpp"
-#include "fakeit/FakeitContext.hpp"
+#include "fakeit/FakeitContext.h"
 #include "fakeit/SortInvocations.hpp"
 #include "fakeit/MatchAnalysis.hpp"
 
