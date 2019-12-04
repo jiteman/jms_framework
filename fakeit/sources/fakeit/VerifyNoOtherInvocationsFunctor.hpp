@@ -13,7 +13,7 @@
 #include "fakeit/StubbingImpl.hpp"
 #include "fakeit/StubbingProgress.hpp"
 #include "fakeit/Sequence.hpp"
-#include "fakeit/SortInvocations.hpp"
+#include "fakeit/InvocationUtils.h"
 #include "fakeit/UsingFunctor.hpp"
 #include "fakeit/VerifyNoOtherInvocationsVerificationProgress.hpp"
 

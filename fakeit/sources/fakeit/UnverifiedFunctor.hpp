@@ -5,7 +5,7 @@
 
 #include <vector>
 #include <set>
-#include "fakeit/SortInvocations.hpp"
+#include "fakeit/InvocationUtils.h"
 
 #include "fakeit/actual_invocation_source/UnverifiedInvocationsSource.h"
 

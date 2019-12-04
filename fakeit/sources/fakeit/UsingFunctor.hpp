@@ -10,7 +10,7 @@
 #include <set>
 
 #include "fakeit/Sequence.hpp"
-#include "fakeit/SortInvocations.hpp"
+#include "fakeit/InvocationUtils.h"
 #include "fakeit/FakeitContext.h"
 #include "fakeit/UsingProgress.hpp"
 
