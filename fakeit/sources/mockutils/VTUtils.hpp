@@ -3,14 +3,14 @@
  * Copyright (c) 2014 Eran Pe'er.
  *
  * This program is made available under the terms of the MIT License.
- * 
+ *
  * Created on Jun 3, 2014
  */
 #pragma once
 
 #include <functional>
 #include <type_traits>
-#include "mockutils/VirtualOffestSelector.hpp"
+#include "mockutils/untemplate_VirtualOffestSelector.hpp"
 #include "mockutils/union_cast.hpp"
 
 namespace fakeit {

@@ -3,29 +3,17 @@
  * Copyright (c) 2014 Eran Pe'er.
  *
  * This program is made available under the terms of the MIT License.
- * 
+ *
  * Created on Jul 17, 2014
  */
 #pragma once
 
 #include <exception>
+
+#include "RefCount.h"
 #include "mockutils/Macros.hpp"
 
 namespace fakeit {
-
-    class RefCount {
-    private:
-        int count;
-
-    public:
-        void AddRef() {
-            count++;
-        }
-
-        int Release() {
-            return --count;
-        }
-    };
 
     template<typename T>
     class smart_ptr {
