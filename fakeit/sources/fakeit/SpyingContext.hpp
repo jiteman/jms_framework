@@ -10,6 +10,8 @@
 
 #include "mockutils/type_utils.hpp"
 #include "fakeit/Xaction.h"
+#include "Action.hpp"
+
 
 namespace fakeit {
 

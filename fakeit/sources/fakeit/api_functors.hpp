@@ -1,7 +1,7 @@
 #pragma once
 
 
-#include "fakeit/SpyFunctor.hpp"
+#include "fakeit/SpyFunctor.h"
 #include "fakeit/FakeFunctor.hpp"
 //#include "fakeit/UnverifiedFunctor.hpp"
 
