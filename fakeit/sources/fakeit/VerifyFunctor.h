@@ -26,8 +26,7 @@ namespace fakeit {
 
     public:
 
-        VerifyFunctor(FakeitContext &fakeit) : _fakeit(fakeit) {
-        }
+        VerifyFunctor(FakeitContext &fakeit);
 
         template<typename ... list>
         SequenceVerificationProgress operator()(const Sequence &sequence, const list &... tail) {

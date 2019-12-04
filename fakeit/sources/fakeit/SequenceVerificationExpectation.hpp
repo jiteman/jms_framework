@@ -8,6 +8,7 @@
 #include "FakeitContext.h"
 #include "fakeit/actual_invocation_source/InvocationsSourceProxy.h"
 #include "MatchAnalysis.h"
+#include "fakeit/fakeit_exceptions/UncaughtException.h"
 
 namespace fakeit {
 
