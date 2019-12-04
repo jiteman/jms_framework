@@ -12,7 +12,7 @@
 #include "fakeit/Sequence.hpp"
 #include "fakeit/InvocationUtils.h"
 #include "fakeit/FakeitContext.h"
-#include "fakeit/UsingProgress.hpp"
+#include "fakeit/UsingProgress.h"
 
 #include "fakeit/actual_invocation_source/AggregateInvocationsSource.h"
 

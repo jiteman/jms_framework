@@ -4,7 +4,7 @@
 #include "SequenceVerificationProgress.hpp"
 #include "fakeit/actual_invocation_source/AggregateInvocationsSource.h"
 #include "fakeit/actual_invocation_source/UnverifiedInvocationsSource.h"
-#include "UsingProgress.hpp"
+#include "UsingProgress.h"
 
 
 namespace fakeit {

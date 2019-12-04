@@ -12,8 +12,7 @@ namespace fakeit {
         fakeit::FakeitContext &_fakeit;
         InvocationsSourceProxy _sources;
 
-        void collectSequences(std::vector<fakeit::Sequence *> &) {
-        }
+        void collectSequences(std::vector<fakeit::Sequence *> &);
 
         template<typename ... list>
         void collectSequences(std::vector<fakeit::Sequence *> &vec, const fakeit::Sequence &sequence,
@@ -24,10 +23,7 @@ namespace fakeit {
 
     public:
 
-        UsingProgress(fakeit::FakeitContext &fakeit, InvocationsSourceProxy source) :
-                _fakeit(fakeit),
-                _sources(source) {
-        }
+        UsingProgress(fakeit::FakeitContext &fakeit, InvocationsSourceProxy source);
 
         template<typename ... list>
         SequenceVerificationProgress Verify(const fakeit::Sequence &sequence, const list &... tail) {
