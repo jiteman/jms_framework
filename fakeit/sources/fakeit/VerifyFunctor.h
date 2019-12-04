@@ -15,7 +15,7 @@
 //#include "fakeit/UsingFunctor.hpp"
 #include "fakeit/UsingProgress.h"
 #include "fakeit/FakeitContext.h"
-#include "fakeit/SequenceVerificationProgress.hpp"
+//#include "fakeit/SequenceVerificationProgress.hpp"
 
 #include "fakeit/actual_invocation_source/AggregateInvocationsSource.h"
 
