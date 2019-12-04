@@ -1,5 +1,7 @@
 #include "SequenceVerificationProgress.h"
 
+#include "FakeitContext.h"
+
 
 namespace fakeit {
 
@@ -8,11 +10,12 @@ SequenceVerificationProgress::SequenceVerificationProgress(SequenceVerificationE
 }
 
 SequenceVerificationProgress::SequenceVerificationProgress(
-		FakeitContext &fakeit,
-		InvocationsSourceProxy sources,
-		std::vector<Sequence *> &allSequences) :
-		SequenceVerificationProgress(new SequenceVerificationExpectation(fakeit, sources, allSequences)) {
-}
+	FakeitContext &fakeit,
+	InvocationsSourceProxy sources,
+	std::vector<Sequence *> &allSequences)
+	:
+		SequenceVerificationProgress(new SequenceVerificationExpectation(fakeit, sources, allSequences))
+{}
 
 void SequenceVerificationProgress::verifyInvocations(const int times) {
 	_expectationPtr->setExpectedCount(times);

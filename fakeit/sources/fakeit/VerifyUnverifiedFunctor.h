@@ -5,6 +5,7 @@
 #include "fakeit/actual_invocation_source/AggregateInvocationsSource.h"
 #include "fakeit/actual_invocation_source/UnverifiedInvocationsSource.h"
 #include "UsingProgress.h"
+#include "InvocationUtils.h"
 
 
 namespace fakeit {
