@@ -20,7 +20,7 @@
 #include "mockutils/MethodInvocationHandler.hpp"
 #include "mockutils/VTUtils.hpp"
 #include "mockutils/FakeObject.hpp"
-#include "mockutils/MethodProxy.hpp"
+#include "mockutils/MethodProxy.h"
 #include "mockutils/MethodProxyCreator.hpp"
 
 
