@@ -71,7 +71,7 @@ struct ErrorFormattingTests: tpunit::TestFixture {
 		Mock<SomeInterface> mock;
 		try {
 			auto selector = Method(mock,foo);
-			Verify(selector).Exactly(Once);
+			Verify(selector).Exactly(_once_);
 		} catch (SequenceVerificationException& ) {
 		}
 	}

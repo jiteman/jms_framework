@@ -126,7 +126,7 @@ struct EventNotification: tpunit::TestFixture {
 		finally onExit(teardown);
 		Mock<SomeInterface> mock;
 		try {
-			fakeit::Verify(Method(mock, func)).setFileInfo("test file", 1, "test method").Exactly(Once);
+			fakeit::Verify(Method(mock, func)).setFileInfo("test file", 1, "test method").Exactly(_once_);
 		} catch (FakeEventListener::AssertionException& e) {
 			std::string expectedMsg { "SequenceVerificationEvent" };
 			ASSERT_EQUAL(expectedMsg, e._msg);

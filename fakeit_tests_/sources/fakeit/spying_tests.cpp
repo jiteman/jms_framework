@@ -125,7 +125,7 @@ struct SpyingTests: tpunit::TestFixture {
 		SomeClass& i = mock.get();
 		ASSERT_EQUAL(1, i.func1(1));
 		Verify(Method(mock,func1));
-		Verify(Method(mock,func1)).Exactly(Once);
+		Verify(Method(mock,func1)).Exactly(_once_);
 		VerifyNoOtherInvocations(mock);
 	}
 
@@ -136,7 +136,7 @@ struct SpyingTests: tpunit::TestFixture {
 		SomeClass& i = mock.get();
 		i.proc();
 		Verify(Method(mock,proc));
-		Verify(Method(mock,proc)).Exactly(Once);
+		Verify(Method(mock,proc)).Exactly(_once_);
 		VerifyNoOtherInvocations(mock);
 	}
 
@@ -147,8 +147,8 @@ struct SpyingTests: tpunit::TestFixture {
 		SomeClass& i = mock.get();
 		i.func1(1);
 		i.proc();
-		Verify(Method(mock,proc)).Exactly(Once);
-		Verify(Method(mock,func1)).Exactly(Once);
+		Verify(Method(mock,proc)).Exactly(_once_);
+		Verify(Method(mock,func1)).Exactly(_once_);
 		VerifyNoOtherInvocations(mock);
 	}
 

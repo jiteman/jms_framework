@@ -263,7 +263,7 @@ struct BasicVerification: tpunit::TestFixture {
 
 		ASSERT_THROW(Verify(Method(mock,func)).Exactly(Times<1>()), fakeit::VerificationException);
 		ASSERT_THROW(Verify(Method(mock,proc)).Exactly(Times<1>()), fakeit::VerificationException);
-		ASSERT_THROW(Verify(Method(mock,proc)).Exactly(Once), fakeit::VerificationException);
+		ASSERT_THROW(Verify(Method(mock,proc)).Exactly(_once_), fakeit::VerificationException);
 
 		SomeInterface &i = mock.get();
 		i.func(1);
@@ -276,7 +276,7 @@ struct BasicVerification: tpunit::TestFixture {
 
 		Verify(Method(mock,func)).Exactly(Times<1>());
 		Verify(Method(mock,proc)).Exactly(Times<1>());
-		Verify(Method(mock,proc)).Exactly(Once);
+		Verify(Method(mock,proc)).Exactly(_once_);
 
 		i.func(1);
 		i.proc(1);
@@ -497,7 +497,7 @@ struct BasicVerification: tpunit::TestFixture {
         struct AnInterface {
             virtual int func(int) = 0;
         };
-        
+
         Mock<AnInterface> mock;
 		When(Method(mock, func)).AlwaysReturn(0);
 

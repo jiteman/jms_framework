@@ -206,7 +206,7 @@ struct ArgumentMatchingTests: tpunit::TestFixture {
     void format_Any() {
 		Mock<SomeInterface> mock;
 		try {
-			fakeit::Verify(Method(mock, func).Using(_any_)).setFileInfo("test file", 1, "test method").Exactly(Once);
+			fakeit::Verify(Method(mock, func).Using(_any_)).setFileInfo("test file", 1, "test method").Exactly(_once_);
 		} catch (SequenceVerificationException& e) {
             std::string expectedMsg{ formatLineNumner("test file", 1) };
             expectedMsg += ": Verification error\n";
@@ -222,7 +222,7 @@ struct ArgumentMatchingTests: tpunit::TestFixture {
 	void format_Eq() {
 		Mock<SomeInterface> mock;
 		try {
-			fakeit::Verify(Method(mock, func).Using(Eq(1))).setFileInfo("test file", 1, "test method").Exactly(Once);
+			fakeit::Verify(Method(mock, func).Using(Eq(1))).setFileInfo("test file", 1, "test method").Exactly(_once_);
 		} catch (SequenceVerificationException& e) {
             std::string expectedMsg{ formatLineNumner("test file", 1) };
             expectedMsg += ": Verification error\n";
@@ -238,7 +238,7 @@ struct ArgumentMatchingTests: tpunit::TestFixture {
 	void format_Gt() {
 		Mock<SomeInterface> mock;
 		try {
-			fakeit::Verify(Method(mock, func).Using(Gt(1))).setFileInfo("test file", 1, "test method").Exactly(Once);
+			fakeit::Verify(Method(mock, func).Using(Gt(1))).setFileInfo("test file", 1, "test method").Exactly(_once_);
 		} catch (SequenceVerificationException& e) {
             std::string expectedMsg{ formatLineNumner("test file", 1) };
             expectedMsg += ": Verification error\n";
@@ -254,7 +254,7 @@ struct ArgumentMatchingTests: tpunit::TestFixture {
 	void format_Ge() {
 		Mock<SomeInterface> mock;
 		try {
-			fakeit::Verify(Method(mock, func).Using(Ge(1))).setFileInfo("test file", 1, "test method").Exactly(Once);
+			fakeit::Verify(Method(mock, func).Using(Ge(1))).setFileInfo("test file", 1, "test method").Exactly(_once_);
 		} catch (SequenceVerificationException& e) {
             std::string expectedMsg{ formatLineNumner("test file", 1) };
 			expectedMsg += ": Verification error\n";
@@ -270,7 +270,7 @@ struct ArgumentMatchingTests: tpunit::TestFixture {
 	void format_Lt() {
 		Mock<SomeInterface> mock;
 		try {
-			fakeit::Verify(Method(mock, func).Using(Lt(1))).setFileInfo("test file", 1, "test method").Exactly(Once);
+			fakeit::Verify(Method(mock, func).Using(Lt(1))).setFileInfo("test file", 1, "test method").Exactly(_once_);
 		} catch (SequenceVerificationException& e) {
             std::string expectedMsg{ formatLineNumner("test file", 1) };
             expectedMsg += ": Verification error\n";
@@ -286,7 +286,7 @@ struct ArgumentMatchingTests: tpunit::TestFixture {
 	void format_Le() {
 		Mock<SomeInterface> mock;
 		try {
-			fakeit::Verify(Method(mock, func).Using(Le(1))).setFileInfo("test file", 1, "test method").Exactly(Once);
+			fakeit::Verify(Method(mock, func).Using(Le(1))).setFileInfo("test file", 1, "test method").Exactly(_once_);
 		} catch (SequenceVerificationException& e) {
             std::string expectedMsg{ formatLineNumner("test file", 1) };
 			expectedMsg += ": Verification error\n";
@@ -302,7 +302,7 @@ struct ArgumentMatchingTests: tpunit::TestFixture {
 	void format_Ne() {
 		Mock<SomeInterface> mock;
 		try {
-			fakeit::Verify(Method(mock, func).Using(Ne(1))).setFileInfo("test file", 1, "test method").Exactly(Once);
+			fakeit::Verify(Method(mock, func).Using(Ne(1))).setFileInfo("test file", 1, "test method").Exactly(_once_);
 		} catch (SequenceVerificationException& e) {
             std::string expectedMsg{ formatLineNumner("test file", 1) };
             expectedMsg += ": Verification error\n";

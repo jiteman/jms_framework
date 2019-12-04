@@ -7,18 +7,15 @@
  */
 #pragma once
 
+#include "Quantity.h"
+
+
 #include <functional>
 #include <type_traits>
 
 namespace fakeit {
 
-    struct Quantity {
-        Quantity(const int q) :
-                quantity(q) {
-        }
-
-        const int quantity;
-    } static Once(1);
+	extern Quantity _once_;
 
     template<typename R>
     struct Quantifier : public Quantity {

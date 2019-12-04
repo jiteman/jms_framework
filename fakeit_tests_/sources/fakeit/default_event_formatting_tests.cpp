@@ -57,14 +57,14 @@ struct DefaultEventFormatting: tpunit::TestFixture {
 		virtual void proc(int) = 0;
 
 		virtual int all_types(
-			char, 
-			bool, 
-			int, 
-			unsigned int, 
-			long, 
-			unsigned long, 
-			//long long, 
-			//unsigned long long, 
+			char,
+			bool,
+			int,
+			unsigned int,
+			long,
+			unsigned long,
+			//long long,
+			//unsigned long long,
 			double,
 			long double
 			) = 0;
@@ -105,7 +105,7 @@ struct DefaultEventFormatting: tpunit::TestFixture {
 	void format_AnyArguments() {
 		Mock<SomeInterface> mock;
 		try {
-			fakeit::Verify(Method(mock, func)).setFileInfo("test file",1,"test method").Exactly(Once);
+			fakeit::Verify(Method(mock, func)).setFileInfo("test file",1,"test method").Exactly(_once_);
 		}
 		catch (SequenceVerificationException& e) {
             std::string expectedMsg{ formatLineNumner("test file", 1) };
@@ -122,7 +122,7 @@ struct DefaultEventFormatting: tpunit::TestFixture {
 	void format_Exactly_Once() {
 		Mock<SomeInterface> mock;
 		try {
-			fakeit::Verify(Method(mock, func)).setFileInfo("test file",1,"test method").Exactly(Once);
+			fakeit::Verify(Method(mock, func)).setFileInfo("test file",1,"test method").Exactly(_once_);
 		}
 		catch (SequenceVerificationException& e) {
             std::string expectedMsg{ formatLineNumner("test file", 1) };
@@ -140,7 +140,7 @@ struct DefaultEventFormatting: tpunit::TestFixture {
 	void format_Atleast_Once() {
 		Mock<SomeInterface> mock;
 		try {
-			fakeit::Verify(Method(mock, func)).setFileInfo("test file",1,"test method").AtLeast(Once);
+			fakeit::Verify(Method(mock, func)).setFileInfo("test file",1,"test method").AtLeast(_once_);
 		}
 		catch (SequenceVerificationException& e) {
             std::string expectedMsg{ formatLineNumner("test file", 1) };

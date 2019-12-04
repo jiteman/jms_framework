@@ -108,7 +108,7 @@ struct CustomEventFormatting : tpunit::TestFixture {
 		finally onExit(teardown);
 		Mock<SomeInterface> mock;
 		try {
-			fakeit::Verify(Method(mock, func)).setFileInfo("test file", 1, "test method").Exactly(Once);
+			fakeit::Verify(Method(mock, func)).setFileInfo("test file", 1, "test method").Exactly(_once_);
 		}
 		catch (SequenceVerificationException& e) {
             std::string expectedMsg{ formatLineNumner("test file",1)  + ": SequenceVerificationEvent" };
