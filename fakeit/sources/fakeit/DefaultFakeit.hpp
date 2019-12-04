@@ -8,7 +8,7 @@
 #include "fakeit/EventHandler.hpp"
 #include "fakeit/FakeitContext.hpp"
 #include "fakeit/DefaultEventLogger.hpp"
-#include "fakeit/DefaultEventFormatter.hpp"
+#include "fakeit/DefaultEventFormatter.h"
 
 namespace fakeit {
 

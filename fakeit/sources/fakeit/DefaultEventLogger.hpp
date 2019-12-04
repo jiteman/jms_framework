@@ -9,7 +9,7 @@
 
 #include <iostream>
 #include "fakeit/EventHandler.hpp"
-#include "fakeit/DefaultEventFormatter.hpp"
+#include "fakeit/DefaultEventFormatter.h"
 #include "fakeit/FakeitExceptions.hpp"
 
 namespace fakeit {
