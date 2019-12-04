@@ -7,7 +7,7 @@
  */
 #pragma once
 
-#include "fakeit/DomainObjects.hpp"
+//#include "fakeit/DomainObjects.hpp"
 #include "fakeit/MockImpl.hpp"
 #include "fakeit/ActualInvocation.hpp"
 #include "fakeit/Prototype.hpp"
@@ -38,7 +38,7 @@ namespace fakeit {
 //		std::shared_ptr<C> getShared() {
 //			return impl.getShared();
 //		}
-        
+
 		C &operator()() {
             return get();
         }

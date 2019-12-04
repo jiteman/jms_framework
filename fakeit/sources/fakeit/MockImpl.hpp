@@ -16,13 +16,15 @@
 #include "mockutils/DynamicProxy.hpp"
 #include "fakeit/StubbingImpl.hpp"
 #include "fakeit/MethodMockingContext.hpp"
-#include "fakeit/DomainObjects.hpp"
+//#include "fakeit/DomainObjects.hpp"
+#include "fakeit/domain_objects/MockObject.hpp"
+#include "fakeit/domain_objects/UnknownMethod.h"
 #include "fakeit/FakeitContext.hpp"
 #include "fakeit/ActualInvocationHandler.hpp"
 
 namespace fakeit {
 
-    
+
     template<typename C, typename ... baseclasses>
     class MockImpl : private MockObject<C>, public virtual ActualInvocationsSource {
     public:
@@ -107,7 +109,7 @@ namespace fakeit {
 
     private:
 		// Keep members in this order! _proxy should be deleted before _inatanceOwner.
-		// Not that the dtor of MockImpl calls _proxy.detach(), hence the detach happens 
+		// Not that the dtor of MockImpl calls _proxy.detach(), hence the detach happens
 		// before the destructor of the _proxy is invoked. As a result the dtor method in the virtual
 		// table of the fakedObject is reverted to unmockedDtor() before the proxy is deleted.
 		// This way, any recorded arguments in the proxy that capture the fakeObject itself will
@@ -172,7 +174,7 @@ namespace fakeit {
         protected:
 
             R (C::*_vMethod)(arglist...);
-            
+
         public:
             virtual ~MethodMockingContextImpl() = default;
 
@@ -180,7 +182,7 @@ namespace fakeit {
                     : MethodMockingContextBase<R, arglist...>(mock), _vMethod(vMethod) {
             }
 
-            
+
             virtual std::function<R(arglist&...)> getOriginalMethod() override {
                 void *mPtr = MethodMockingContextBase<R, arglist...>::_mock.getOriginalMethod(_vMethod);
                 C * instance = &(MethodMockingContextBase<R, arglist...>::_mock.get());

@@ -24,7 +24,7 @@
 #include "fakeit/ActualInvocationHandler.hpp"
 #include "fakeit/EventHandler.hpp"
 #include "fakeit/ActionSequence.hpp"
-#include "fakeit/DomainObjects.hpp"
+//#include "fakeit/DomainObjects.hpp"
 #include "fakeit/SpyingContext.hpp"
 #include "fakeit/StubbingContext.hpp"
 #include "fakeit/MatchersCollector.hpp"
