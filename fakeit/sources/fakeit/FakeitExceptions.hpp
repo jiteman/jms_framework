@@ -7,7 +7,8 @@
  */
 #pragma once
 
-#include "fakeit/FakeitEvents.hpp"
+//#include "fakeit/FakeitEvents.hpp"
+
 #include <exception>
 
 
@@ -36,7 +37,7 @@ namespace fakeit {
     };
 
 
-    // Unlike verification exceptions (that are thrown from the test level), this exception 
+    // Unlike verification exceptions (that are thrown from the test level), this exception
     // should not inherit from std::exception so that production code will not catch it.
     struct UnexpectedMethodCallException : public FakeitException {
 

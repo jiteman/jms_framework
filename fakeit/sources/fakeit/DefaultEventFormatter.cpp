@@ -1,5 +1,9 @@
 #include "DefaultEventFormatter.h"
 
+#include "fakeit/fakeit_events/UnexpectedMethodCallEvent.h"
+#include "fakeit/fakeit_events/SequenceVerificationEvent.h"
+#include "fakeit/fakeit_events/NoMoreInvocationsVerificationEvent.h"
+
 
 namespace fakeit {
 
