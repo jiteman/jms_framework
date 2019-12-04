@@ -13,36 +13,9 @@
 
 #endif
 
+#include "VirtualTableBase.h"
+
 namespace fakeit {
-
-    struct VirtualTableBase {
-
-        static VirtualTableBase &getVTable(void *instance) {
-            fakeit::VirtualTableBase *vt = (fakeit::VirtualTableBase *) (instance);
-            return *vt;
-        }
-
-        VirtualTableBase(void **firstMethod) : _firstMethod(firstMethod) { }
-
-        void *getCookie(int index) {
-            return _firstMethod[-3 - index];
-        }
-
-        void setCookie(int index, void *value) {
-            _firstMethod[-3 - index] = value;
-        }
-
-        void *getMethod(unsigned int index) const {
-            return _firstMethod[index];
-        }
-
-        void setMethod(unsigned int index, void *method) {
-            _firstMethod[index] = method;
-        }
-
-    protected:
-        void **_firstMethod;
-    };
 
     template<class C, class ... baseclasses>
     struct VirtualTable : public VirtualTableBase {
