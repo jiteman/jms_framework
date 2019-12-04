@@ -6,9 +6,10 @@
 #include "fakeit/SpyFunctor.hpp"
 #include "fakeit/FakeFunctor.hpp"
 #include "fakeit/WhenFunctor.hpp"
-#include "fakeit/UnverifiedFunctor.hpp"
+//#include "fakeit/UnverifiedFunctor.hpp"
 
 #include "fakeit/VerifyFunctor.h"
+#include "fakeit/UnverifiedFunctor.h"
 
 
 namespace fakeit {

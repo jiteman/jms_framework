@@ -8,6 +8,7 @@
 #include "mockutils/to_string.hpp"
 
 #include "ThrowFalseEventHandler.h"
+#include "Quantity.h"
 
 
 namespace fakeit {
