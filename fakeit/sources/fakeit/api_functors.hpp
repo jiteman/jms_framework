@@ -31,7 +31,7 @@ namespace fakeit {
             use(&Using);
             use(&Verify);
             use(&VerifyNoOtherInvocations);
-            use(&_);
+            use(&_any_);
         }
     };
 

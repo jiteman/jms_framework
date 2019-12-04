@@ -3,17 +3,17 @@
  * Copyright (c) 2014 Eran Pe'er.
  *
  * This program is made available under the terms of the MIT License.
- * 
+ *
  * Created on Jan 12, 2015
  */
 #pragma once
 
-namespace fakeit {
 
-    struct IMatcher : Destructible {
-        ~IMatcher() = default;
-        virtual std::string format() const = 0;
-    };
+#include "IMatcher.h"
+#include "AnyMatcher.h"
+
+
+namespace fakeit {
 
     template<typename T>
     struct TypedMatcher : IMatcher {
@@ -247,8 +247,7 @@ namespace fakeit {
         };
     }
 
-    struct AnyMatcher {
-    } static _;
+	extern AnyMatcher _any_; // check it
 
     template<typename T>
     internal::TypedAnyMatcher<T> Any() {

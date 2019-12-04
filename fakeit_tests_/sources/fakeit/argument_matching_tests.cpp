@@ -50,10 +50,10 @@ struct ArgumentMatchingTests: tpunit::TestFixture {
 	void mixed_matchers() {
 		Mock<SomeInterface> mock;
 
-		When(Method(mock, func2).Using(_, _)).Return(0);
-		When(Method(mock, func2).Using(1, _)).Return(1);
-		When(Method(mock, func2).Using(2, _)).Return(2);
-		When(Method(mock, func2).Using(_, "3")).Return(3);
+		When(Method(mock, func2).Using(_any_, _any_)).Return(0);
+		When(Method(mock, func2).Using(1, _any_)).Return(1);
+		When(Method(mock, func2).Using(2, _any_)).Return(2);
+		When(Method(mock, func2).Using(_any_, "3")).Return(3);
 
 		SomeInterface &i = mock.get();
 
@@ -182,13 +182,13 @@ struct ArgumentMatchingTests: tpunit::TestFixture {
 
 		Mock<SomeInterface> mock;
 
-		When(Method(mock, func).Using(_)).AlwaysReturn(1);
+		When(Method(mock, func).Using(_any_)).AlwaysReturn(1);
 
 		SomeInterface &i = mock.get();
 		ASSERT_EQUAL(1, i.func(2));
 		ASSERT_EQUAL(1, i.func(1));
 
-		Verify(Method(mock, func).Using(_)).Twice();
+		Verify(Method(mock, func).Using(_any_)).Twice();
 	}
 
     void pass_reference_by_value() {
@@ -206,7 +206,7 @@ struct ArgumentMatchingTests: tpunit::TestFixture {
     void format_Any() {
 		Mock<SomeInterface> mock;
 		try {
-			fakeit::Verify(Method(mock, func).Using(_)).setFileInfo("test file", 1, "test method").Exactly(Once);
+			fakeit::Verify(Method(mock, func).Using(_any_)).setFileInfo("test file", 1, "test method").Exactly(Once);
 		} catch (SequenceVerificationException& e) {
             std::string expectedMsg{ formatLineNumner("test file", 1) };
             expectedMsg += ": Verification error\n";
