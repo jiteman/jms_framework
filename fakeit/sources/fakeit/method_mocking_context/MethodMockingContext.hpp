@@ -19,7 +19,7 @@
 
 #include "fakeit/RecordedMethodBody.hpp"
 #include "fakeit/StubbingProgress.hpp"
-#include "fakeit/Sequences.hpp"
+#include "fakeit/Sequences.h"
 #include "fakeit/ActualInvocation.hpp"
 #include "fakeit/ActualInvocationHandler.hpp"
 #include "fakeit/EventHandler.h"

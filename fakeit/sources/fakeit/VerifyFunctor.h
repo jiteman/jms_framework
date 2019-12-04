@@ -7,7 +7,7 @@
  */
 #pragma once
 
-#include "fakeit/Sequences.hpp"
+#include "fakeit/Sequences.h"
 #include "fakeit/InvocationUtils.h"
 #include "fakeit/UsingProgress.h"
 #include "fakeit/FakeitContext.h"
