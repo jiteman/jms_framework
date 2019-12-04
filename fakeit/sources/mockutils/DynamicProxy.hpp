@@ -23,41 +23,8 @@
 #include "mockutils/MethodProxy.hpp"
 #include "mockutils/MethodProxyCreator.hpp"
 
+
 namespace fakeit {
-
-    class InvocationHandlers : public InvocationHandlerCollection {
-        std::vector<std::shared_ptr<Destructible>> &_methodMocks;
-        std::vector<unsigned int> &_offsets;
-
-        unsigned int getOffset(unsigned int id) const
-        {
-            unsigned int offset = 0;
-            for (; offset < _offsets.size(); offset++) {
-                if (_offsets[offset] == id) {
-                    break;
-                }
-            }
-            return offset;
-        }
-
-    public:
-        InvocationHandlers(
-                std::vector<std::shared_ptr<Destructible>> &methodMocks,
-                std::vector<unsigned int> &offsets) :
-                _methodMocks(methodMocks), _offsets(offsets) {
-			for (std::vector<unsigned int>::iterator it = _offsets.begin(); it != _offsets.end(); ++it)
-			{
-				*it = std::numeric_limits<int>::max();
-			}
-        }
-
-        Destructible *getInvocatoinHandlerPtrById(unsigned int id) override {
-            unsigned int offset = getOffset(id);
-            std::shared_ptr<Destructible> ptr = _methodMocks[offset];
-            return ptr.get();
-        }
-
-    };
 
     template<typename C, typename ... baseclasses>
     struct DynamicProxy {

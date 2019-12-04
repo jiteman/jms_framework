@@ -10,15 +10,9 @@
 #include <type_traits>
 #include <typeinfo>
 #include "mockutils/type_utils.hpp"
+#include "DefaultValueException.h"
 
 namespace fakeit {
-
-    struct DefaultValueInstatiationException {
-        virtual ~DefaultValueInstatiationException() = default;
-
-        virtual std::string what() const = 0;
-    };
-
 
     template<class C>
     struct is_constructible_type {

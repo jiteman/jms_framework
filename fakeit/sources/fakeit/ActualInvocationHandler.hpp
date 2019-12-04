@@ -7,7 +7,7 @@
  */
 #pragma once
 
-#include "mockutils/Destructible.hpp"
+#include "mockutils/Destructible.h"
 #include "mockutils/type_utils.hpp"
 
 namespace fakeit {

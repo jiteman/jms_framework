@@ -14,7 +14,7 @@
 #include <sstream>
 
 #include "fakeit/DomainObjects.hpp"
-#include "mockutils/Destructible.hpp"
+#include "mockutils/Destructible.h"
 
 namespace fakeit {
 

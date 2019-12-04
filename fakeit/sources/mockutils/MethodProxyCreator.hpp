@@ -4,23 +4,12 @@
 #include "mockutils/type_utils.hpp"
 #include "mockutils/VirtualTable.hpp"
 #include "mockutils/MethodProxy.hpp"
-#include "mockutils/Destructible.hpp"
+#include "mockutils/MethodInvocationHandler.hpp"
+#include "mockutils/InvocationHandlers.h"
+#include "mockutils/InvocationHandlerCollection.h"
+#include "mockutils/Destructible.h"
 
 namespace fakeit {
-
-    struct InvocationHandlerCollection {
-        static const unsigned int VT_COOKIE_INDEX = 0;
-
-        virtual Destructible *getInvocatoinHandlerPtrById(unsigned int index) = 0;
-
-        static InvocationHandlerCollection *getInvocationHandlerCollection(void *instance) {
-            VirtualTableBase &vt = VirtualTableBase::getVTable(instance);
-            InvocationHandlerCollection *invocationHandlerCollection = (InvocationHandlerCollection *) vt.getCookie(
-                    InvocationHandlerCollection::VT_COOKIE_INDEX);
-            return invocationHandlerCollection;
-        }
-    };
-
 
     template<typename R, typename ... arglist>
     class MethodProxyCreator {

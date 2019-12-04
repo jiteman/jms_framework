@@ -14,7 +14,7 @@
 #include <vector>
 #include <unordered_set>
 
-#include "mockutils/Destructible.hpp"
+#include "mockutils/Destructible.h"
 #include "mockutils/type_utils.hpp"
 #include "fakeit/argument_matchers.hpp"
 

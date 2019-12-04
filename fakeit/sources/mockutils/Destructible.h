@@ -6,9 +6,12 @@
  * Created on Mar 10, 2014
  */
 #pragma once
+
 namespace fakeit {
+
     class Destructible {
     public:
-        virtual ~Destructible() {}
+        virtual ~Destructible();
     };
+
 }

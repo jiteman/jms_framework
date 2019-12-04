@@ -13,7 +13,7 @@
 #include "fakeit/FakeitExceptions.hpp"
 
 #include "mockutils/smart_ptr.hpp"
-#include "mockutils/Destructible.hpp"
+#include "mockutils/Destructible.h"
 #include "Xaction.hpp"
 
 namespace fakeit {

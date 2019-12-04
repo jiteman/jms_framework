@@ -3,7 +3,7 @@
  * Copyright (c) 2014 Eran Pe'er.
  *
  * This program is made available under the terms of the MIT License.
- * 
+ *
  * Created on Jun 5, 2014
  */
 #pragma once
@@ -14,7 +14,7 @@
 #include <type_traits>
 
 #include "mockutils/DefaultValue.hpp"
-#include "mockutils/Destructible.hpp"
+#include "mockutils/Destructible.h"
 #include "mockutils/type_utils.hpp"
 #include "mockutils/TupleDispatcher.hpp"
 #include "fakeit/FakeitExceptions.hpp"
