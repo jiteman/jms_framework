@@ -68,7 +68,7 @@ public:
 
 	virtual void getInvolvedMocks(std::vector<ActualInvocationsSource *> &into) const override;
 
-	friend inline ConcatenatedSequence operator+(const Sequence &s1, const Sequence &s2);
+	friend ConcatenatedSequence operator+(const Sequence &s1, const Sequence &s2);
 };
 
 class RepeatedSequence : public virtual Sequence {
@@ -85,9 +85,9 @@ public:
 
 	unsigned int size() const override ;
 
-	friend inline RepeatedSequence operator*(const Sequence &s, int times);
+	friend RepeatedSequence operator*(const Sequence &s, int times);
 
-	friend inline RepeatedSequence operator*(int times, const Sequence &s);
+	friend RepeatedSequence operator*(int times, const Sequence &s);
 
 	void getInvolvedMocks(std::vector<ActualInvocationsSource *> &into) const override;
 
@@ -99,20 +99,11 @@ public:
 };
 
 
-inline ConcatenatedSequence operator+(const Sequence &s1, const Sequence &s2) {
-	return ConcatenatedSequence(s1, s2);
-}
+ConcatenatedSequence operator +(const Sequence &s1, const Sequence &s2);
 
-inline RepeatedSequence operator*(const Sequence &s, int times) {
-	if (times <= 0)
-		throw std::invalid_argument("times");
-	return RepeatedSequence(s, times);
-}
+RepeatedSequence operator *(const Sequence &s, int times);
 
-inline RepeatedSequence operator*(int times, const Sequence &s) {
-	if (times <= 0)
-		throw std::invalid_argument("times");
-	return RepeatedSequence(s, times);
-}
+RepeatedSequence operator *(int times, const Sequence &s);
+
 
 }

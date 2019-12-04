@@ -4,8 +4,6 @@
 namespace fakeit {
 
 
-struct ActualInvocationsSource;
-
 Sequence::Sequence()
 {}
 
@@ -74,25 +72,25 @@ const Sequence &RepeatedSequence::getSequence() const {
 	return _s;
 }
 
-//ConcatenatedSequence operator +(const Sequence &s1, const Sequence &s2) {
-//	return ConcatenatedSequence(s1, s2);
-//}
+ConcatenatedSequence operator +(const Sequence &s1, const Sequence &s2) {
+	return ConcatenatedSequence(s1, s2);
+}
 
-//RepeatedSequence operator *(const Sequence &s, int times) {
-//	if (times <= 0) {
-//		throw std::invalid_argument("times");
-//	}
+RepeatedSequence operator *(const Sequence &s, int times) {
+	if (times <= 0) {
+		throw std::invalid_argument("times");
+	}
 
-//	return RepeatedSequence(s, times);
-//}
+	return RepeatedSequence(s, times);
+}
 
-//RepeatedSequence operator*(int times, const Sequence &s) {
-//	if (times <= 0) {
-//		throw std::invalid_argument("times");
-//	}
+RepeatedSequence operator*(int times, const Sequence &s) {
+	if (times <= 0) {
+		throw std::invalid_argument("times");
+	}
 
-//	return RepeatedSequence(s, times);
-//}
+	return RepeatedSequence(s, times);
+}
 
 
 }
