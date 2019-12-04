@@ -14,6 +14,9 @@
 #include "fakeit/FakeitContext.h"
 #include "fakeit/UsingProgress.hpp"
 
+#include "fakeit/actual_invocation_source/AggregateInvocationsSource.h"
+
+
 namespace fakeit {
 
     class UsingFunctor {

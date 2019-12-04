@@ -13,9 +13,13 @@
 
 #include "mockutils/Macros.hpp"
 #include "fakeit/ActualInvocation.hpp"
-#include "fakeit/ActualInvocationsSource.h"
+//#include "fakeit/ActualInvocationsSource.h"
+
 
 namespace fakeit {
+
+
+struct ActualInvocationsSource;
 
     class Sequence {
     private:

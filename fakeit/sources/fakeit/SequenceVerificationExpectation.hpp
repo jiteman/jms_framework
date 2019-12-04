@@ -2,9 +2,12 @@
 
 #include "mockutils/smart_ptr.hpp"
 //#include "fakeit/FakeitExceptions.hpp"
-#include "fakeit/FakeitContext.h"
 #include "fakeit/SortInvocations.hpp"
-#include "fakeit/MatchAnalysis.hpp"
+//#include "fakeit/MatchAnalysis.hpp"
+
+#include "FakeitContext.h"
+#include "fakeit/actual_invocation_source/InvocationsSourceProxy.h"
+#include "MatchAnalysis.h"
 
 namespace fakeit {
 

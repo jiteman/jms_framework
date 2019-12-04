@@ -1,11 +1,14 @@
 #pragma once
 
 
-#include "fakeit/Invocation.hpp"
+//#include "fakeit/Invocation.hpp"
 #include "UnexpectedType.h"
 
 
 namespace fakeit {
+
+
+class Invocation;
 
 
 struct UnexpectedMethodCallEvent {

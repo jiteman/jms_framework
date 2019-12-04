@@ -17,8 +17,12 @@
 #include "fakeit/invocation_matchers.hpp"
 //#include "fakeit/FakeitEvents.hpp"
 //#include "fakeit/FakeitExceptions.hpp"
-#include "fakeit/fakeit_exceptions/UnexpectedMethodCallException.h"
 #include "mockutils/MethodInvocationHandler.hpp"
+
+#include "fakeit/actual_invocation_source/ActualInvocationsSource.h"
+#include "fakeit/actual_invocation_source/ActualInvocationsContainer.h"
+#include "fakeit/fakeit_exceptions/UnexpectedMethodCallException.h"
+
 
 namespace fakeit {
 

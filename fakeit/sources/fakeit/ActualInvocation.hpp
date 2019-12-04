@@ -18,7 +18,7 @@
 
 
 #include "mockutils/Macros.hpp"
-#include "fakeit/Invocation.hpp"
+#include "fakeit/Invocation.h"
 #include "mockutils/TuplePrinter.hpp"
 
 

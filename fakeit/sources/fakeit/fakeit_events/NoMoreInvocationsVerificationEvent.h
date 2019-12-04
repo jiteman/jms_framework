@@ -1,12 +1,15 @@
 #pragma once
 
-#include "fakeit/Invocation.hpp"
+
 #include "VerificationEvent.h"
 
 #include <vector>
 
 
 namespace fakeit {
+
+
+struct Invocation;
 
 
 struct NoMoreInvocationsVerificationEvent : public VerificationEvent {
