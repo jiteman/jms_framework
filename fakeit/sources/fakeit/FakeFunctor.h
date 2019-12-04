@@ -23,8 +23,7 @@ namespace fakeit {
             rootWithoutConst.commit();
         }
 
-        void operator()() {
-        }
+        void operator ()();
 
     public:
 

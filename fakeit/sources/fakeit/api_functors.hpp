@@ -2,9 +2,7 @@
 
 
 #include "fakeit/SpyFunctor.h"
-#include "fakeit/FakeFunctor.hpp"
-//#include "fakeit/UnverifiedFunctor.hpp"
-
+#include "fakeit/FakeFunctor.h"
 #include "fakeit/VerifyFunctor.h"
 #include "fakeit/UnverifiedFunctor.h"
 #include "fakeit/UsingFunctor.h"
