@@ -95,7 +95,7 @@ struct TypeInfoTests : tpunit::TestFixture {
 
  		aPtr = dynamic_cast<A*>(topLeft);
   		ASSERT_EQUAL(0, aPtr->l());
- 
+
   		left = dynamic_cast<Left*>(topLeft);
   		ASSERT_EQUAL(0, left->l());
 	}

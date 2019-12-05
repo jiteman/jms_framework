@@ -108,9 +108,14 @@ struct DtorMocking : tpunit::TestFixture
 		Fake(Method(m, DoSomething));
 		Fake(Dtor(m));
 
-		std::unique_ptr<SomeInterface2> ptr = std::unique_ptr<SomeInterface2>(&m.get());		
+		std::unique_ptr<SomeInterface2> ptr = std::unique_ptr<SomeInterface2>(&m.get());
 		ptr = nullptr;
 	}
+
+#if defined( _MSC_VER )
+#pragma warning( push )
+#pragma warning( disable: 4265 ) // '': class has virtual functions, but destructor is not virtual
+#endif
 
 	struct NoVirtualDestructor {
 		~NoVirtualDestructor() {}
@@ -121,5 +126,9 @@ struct DtorMocking : tpunit::TestFixture
 		Mock<NoVirtualDestructor> m;
 		ASSERT_THROW(Fake(Dtor(m)), std::runtime_error);
 	}
+
+#if defined( _MSC_VER )
+#pragma warning( pop )
+#endif
 
 } __DtorMocking;

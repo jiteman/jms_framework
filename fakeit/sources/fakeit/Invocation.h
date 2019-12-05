@@ -15,14 +15,16 @@
 
 #include <string>
 
+#include "fakeit_lib.h"
+
 
 namespace fakeit {
 
-    struct Invocation : Destructible {
+    struct JMSD_FAKEIT_SHARED_INTERFACE Invocation : Destructible {
 
         static unsigned int nextInvocationOrdinal();
 
-        struct Matcher {
+        struct JMSD_FAKEIT_SHARED_INTERFACE Matcher {
 
             virtual ~Matcher() THROWS;
 

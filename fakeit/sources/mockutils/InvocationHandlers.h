@@ -7,11 +7,13 @@
 #include <vector>
 #include <memory>
 
+#include "fakeit_lib.h"
+
 
 namespace fakeit {
 
 
-class InvocationHandlers : public InvocationHandlerCollection {
+class JMSD_FAKEIT_SHARED_INTERFACE InvocationHandlers : public InvocationHandlerCollection {
 	std::vector<std::shared_ptr<Destructible>> &_methodMocks;
 	std::vector<unsigned int> &_offsets;
 

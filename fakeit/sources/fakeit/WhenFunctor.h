@@ -15,13 +15,15 @@
 #include "mockutils/smart_ptr.hpp"
 #include "mockutils/Macros.hpp"
 
+#include "fakeit_lib.h"
+
 
 namespace fakeit {
 
 
-class WhenFunctor {
+class JMSD_FAKEIT_SHARED_INTERFACE WhenFunctor {
 
-	struct StubbingChange {
+	struct JMSD_FAKEIT_SHARED_INTERFACE StubbingChange {
 
 		friend class WhenFunctor;
 

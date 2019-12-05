@@ -7,13 +7,16 @@
 
 #include <vector>
 
+#include "fakeit_lib.h"
+
+
 namespace fakeit {
 
 
 class Sequence;
 
 
-struct SequenceVerificationExpectation {
+struct JMSD_FAKEIT_SHARED_INTERFACE SequenceVerificationExpectation {
 
 	friend class SequenceVerificationProgress;
 

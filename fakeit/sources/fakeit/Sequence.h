@@ -5,6 +5,8 @@
 
 #include <vector>
 
+#include "fakeit_lib.h"
+
 
 namespace fakeit {
 
@@ -12,7 +14,7 @@ namespace fakeit {
 struct ActualInvocationsSource;
 
 
-class Sequence {
+class JMSD_FAKEIT_SHARED_INTERFACE Sequence {
 private:
 
 protected:

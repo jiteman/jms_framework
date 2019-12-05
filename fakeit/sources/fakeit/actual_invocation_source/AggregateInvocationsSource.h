@@ -5,11 +5,13 @@
 #include <vector>
 #include <unordered_set>
 
+#include "fakeit_lib.h"
+
 
 namespace fakeit {
 
 
-struct AggregateInvocationsSource : public ActualInvocationsSource {
+struct JMSD_FAKEIT_SHARED_INTERFACE AggregateInvocationsSource : public ActualInvocationsSource {
 
 	AggregateInvocationsSource(std::vector<ActualInvocationsSource *> &sources);
 

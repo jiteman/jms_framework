@@ -1,10 +1,12 @@
 #pragma once
 
+#include "fakeit_lib.h"
+
 
 namespace fakeit {
 
 
-class RefCount {
+class JMSD_FAKEIT_SHARED_INTERFACE RefCount {
 private:
 	int count;
 

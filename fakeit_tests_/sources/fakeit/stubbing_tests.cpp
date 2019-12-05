@@ -45,7 +45,7 @@ struct BasicStubbing : tpunit::TestFixture {
                     TEST(BasicStubbing::stub_multiple_do_with_list),
                     TEST(BasicStubbing::exception_while_stubbing_should_cancel_stubbing),
                     TEST(BasicStubbing::reset_mock_to_initial_state),
-                    TEST(BasicStubbing::use_lambda_to_change_ptr_value), 
+                    TEST(BasicStubbing::use_lambda_to_change_ptr_value),
                     TEST(BasicStubbing::assingOutParamsWithLambda)
             ) {
     }
@@ -165,7 +165,7 @@ struct BasicStubbing : tpunit::TestFixture {
 
         ASSERT_THROW(i.func(3), fakeit::UnexpectedMethodCallException);
         ASSERT_THROW(i.proc(3), fakeit::UnexpectedMethodCallException);
-	
+
 		When(Method(mock, func)).Do([](int& val) {
 			return val + 1;
 		});
@@ -271,7 +271,7 @@ struct BasicStubbing : tpunit::TestFixture {
         i.proc(3);
         i.proc(3);
         ASSERT_EQUAL(3, a);
-    
+
 		Method(mock, func) = [](int& val) {
 			return val + 1;
 		};
@@ -597,7 +597,13 @@ struct BasicStubbing : tpunit::TestFixture {
 
     void reset_mock_to_initial_state() {
         struct SomeInterface {
-            virtual int func(int) = 0;
+			virtual ~SomeInterface() = 0;
+
+#if defined( _MSC_VER )
+            virtual int func(int) = 0 {};
+#else
+			virtual int func(int) = 0;
+#endif
 
             std::string state;
         };
@@ -636,7 +642,11 @@ struct BasicStubbing : tpunit::TestFixture {
 
     void use_lambda_to_change_ptr_value() {
         struct SomeClass {
-            virtual int foo(int *x) = 0;
+#if defined( _MSC_VER )
+            virtual int foo(int *) = 0 {};
+#else
+			virtual int foo(int *x) = 0;
+#endif
         };
 
         Mock<SomeClass> mock;
@@ -654,7 +664,11 @@ struct BasicStubbing : tpunit::TestFixture {
 
     void assingOutParamsWithLambda(){
         struct ApiInterface {
-            virtual bool apiMethod(int a, int b, int& result) = 0;
+#if defined( _MSC_VER )
+			virtual bool apiMethod(int , int , int& ) = 0 {};
+#else
+			virtual bool apiMethod(int a, int b, int& result) = 0;
+#endif
         };
 
         Mock<ApiInterface> mock;

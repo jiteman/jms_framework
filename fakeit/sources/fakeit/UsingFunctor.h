@@ -16,10 +16,12 @@
 
 #include <vector>
 
+#include "fakeit_lib.h"
+
 
 namespace fakeit {
 
-    class UsingFunctor {
+    class JMSD_FAKEIT_SHARED_INTERFACE UsingFunctor {
 
         friend class VerifyFunctor;
 

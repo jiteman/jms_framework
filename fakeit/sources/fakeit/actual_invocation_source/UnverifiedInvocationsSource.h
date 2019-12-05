@@ -6,11 +6,13 @@
 
 #include <unordered_set>
 
+#include "fakeit_lib.h"
+
 
 namespace fakeit {
 
 
-struct UnverifiedInvocationsSource : public ActualInvocationsSource {
+struct JMSD_FAKEIT_SHARED_INTERFACE UnverifiedInvocationsSource : public ActualInvocationsSource {
 
 	UnverifiedInvocationsSource(InvocationsSourceProxy decorated);
 

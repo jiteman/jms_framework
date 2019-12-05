@@ -12,27 +12,32 @@
 #include "fakeit/StubbingContext.hpp"
 #include "fakeit/FakeitContext.h"
 
+#include "fakeit_lib.h"
+
+
 namespace fakeit {
 
-    class FakeFunctor {
-    private:
-        template<typename R, typename ... arglist>
-        void fake(const StubbingContext<R, arglist...> &root) {
-            StubbingContext<R, arglist...> &rootWithoutConst = const_cast<StubbingContext<R, arglist...> &>(root);
-            rootWithoutConst.appendAction(new ReturnDefaultValue<R, arglist...>());
-            rootWithoutConst.commit();
-        }
 
-        void operator ()();
+class JMSD_FAKEIT_SHARED_INTERFACE FakeFunctor {
+private:
+	template<typename R, typename ... arglist>
+	void fake(const StubbingContext<R, arglist...> &root) {
+		StubbingContext<R, arglist...> &rootWithoutConst = const_cast<StubbingContext<R, arglist...> &>(root);
+		rootWithoutConst.appendAction(new ReturnDefaultValue<R, arglist...>());
+		rootWithoutConst.commit();
+	}
 
-    public:
+	void operator ()();
 
-        template<typename H, typename ... M>
-        void operator()(const H &head, const M &... tail) {
-            fake(head);
-            this->operator()(tail...);
-        }
+public:
 
-    };
+	template<typename H, typename ... M>
+	void operator()(const H &head, const M &... tail) {
+		fake(head);
+		this->operator()(tail...);
+	}
+
+};
+
 
 }

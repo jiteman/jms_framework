@@ -3,13 +3,13 @@
  * Copyright (c) 2014 Eran Pe'er.
  *
  * This program is made available under the terms of the MIT License.
- * 
+ *
  * Created on Jan 14, 2015
  */
 #pragma once
 
 #include <tuple>
-
+#include <iostream>
 
 namespace fakeit {
 

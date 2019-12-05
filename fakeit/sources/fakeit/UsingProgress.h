@@ -8,10 +8,12 @@
 
 #include <vector>
 
+#include "fakeit_lib.h"
+
 
 namespace fakeit {
 
-    class UsingProgress {
+    class JMSD_FAKEIT_SHARED_INTERFACE UsingProgress {
         fakeit::FakeitContext &_fakeit;
         InvocationsSourceProxy _sources;
 

@@ -13,11 +13,19 @@
 #include <stdexcept>
 #include <tuple>
 #include <type_traits>
+
+#pragma warning( push )
+#pragma warning( disable: 4986 ) // '': exception specification does not match previous declaration
 #include "wrl\implements.h"
+#pragma warning( pop )
+
 #include "TlHelp32.h"
 
 #include "tpunit++.hpp"
 #include "fakeit.hpp"
+
+#include "mockutils/mscpp/RTTICompleteObjectLocator.hpp"
+#include "mockutils/mscpp/RTTIClassHierarchyDescriptor.hpp"
 
 using namespace fakeit;
 
@@ -91,7 +99,7 @@ struct MscTypeInfoTests : tpunit::TestFixture {
 	{
 	};
 
-#ifdef _WIN64 
+#ifdef _WIN64
 	/*
 	 *  for how this works, see https://msdn.microsoft.com/en-us/library/windows/desktop/ms686849(v=vs.85).aspx
 	 */
@@ -108,7 +116,7 @@ struct MscTypeInfoTests : tpunit::TestFixture {
 			CloseHandle(hModuleSnap);
 			return 0;
 		}
-			
+
 		DWORD_PTR retval = 0;
 		do
 		{
@@ -135,7 +143,7 @@ struct MscTypeInfoTests : tpunit::TestFixture {
 		//Find pointer to std::type_info from the BaseAddress of this module and the typeDescriptorOffset found in *aVFTPtr[-1]
 		DWORD_PTR baseAddress = findBaseAddress(reinterpret_cast<DWORD_PTR>(aObjectLocatorPtr));
 		auto type_info_ptr = reinterpret_cast<const std::type_info *>((uint64_t)baseAddress + aObjectLocatorPtr->typeDescriptorOffset);
-		
+
 		//Get and print class name
 		std::string classname{ type_info_ptr->name() };
 		std::cout << classname << std::endl;

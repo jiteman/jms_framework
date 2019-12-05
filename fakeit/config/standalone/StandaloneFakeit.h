@@ -7,14 +7,18 @@
 #include "mockutils/Macros.hpp"
 
 
+#include "fakeit_lib.h"
+
+
 namespace fakeit {
 
-    struct VerificationException : public std::exception {
+
+    struct JMSD_FAKEIT_SHARED_INTERFACE VerificationException { //: public std::exception {
         virtual ~VerificationException() NO_THROWS;
 
         VerificationException(std::string format);
 
-        friend std::ostream &operator <<(std::ostream &os, const VerificationException &val);
+        friend JMSD_FAKEIT_SHARED_INTERFACE std::ostream &operator <<(std::ostream &os, const VerificationException &val);
 
         void setFileInfo(std::string aFile, int aLine, std::string aCallingMethod);
 
@@ -22,13 +26,16 @@ namespace fakeit {
         int line() const;
         const std::string& callingMethod() const;
 
-        const char* what() const NO_THROWS override;
+		const char* what() const NO_THROWS;
+        //const char* what() const NO_THROWS override;
     private:
         std::string _file;
         int _line;
         std::string _callingMethod;
         std::string _format;
     };
+
+    JMSD_FAKEIT_SHARED_INTERFACE std::ostream &operator <<(std::ostream &os, const VerificationException &val);
 
     struct NoMoreInvocationsVerificationException : public VerificationException {
         NoMoreInvocationsVerificationException(std::string format);
@@ -56,7 +63,7 @@ namespace fakeit {
         EventFormatter &_formatter;
     };
 
-    class StandaloneFakeit : public DefaultFakeit {
+    class JMSD_FAKEIT_SHARED_INTERFACE StandaloneFakeit : public DefaultFakeit {
 
     public:
         virtual ~StandaloneFakeit() = default;

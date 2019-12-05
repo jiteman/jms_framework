@@ -12,8 +12,6 @@
 
 namespace fakeit {
 
-	extern Quantity _once_;
-
     template<typename R>
     struct Quantifier : public Quantity {
         Quantifier(const int q, const R &val) :

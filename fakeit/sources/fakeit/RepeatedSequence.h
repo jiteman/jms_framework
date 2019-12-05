@@ -4,11 +4,13 @@
 
 #include <vector>
 
+#include "fakeit_lib.h"
+
 
 namespace fakeit {
 
 
-class RepeatedSequence : public virtual Sequence {
+class JMSD_FAKEIT_SHARED_INTERFACE RepeatedSequence : public virtual Sequence {
 private:
 	const Sequence &_s;
 	const int times;
@@ -22,9 +24,9 @@ public:
 
 	unsigned int size() const override ;
 
-	friend RepeatedSequence operator *(const Sequence &s, int times);
+	friend JMSD_FAKEIT_SHARED_INTERFACE RepeatedSequence operator *(const Sequence &s, int times);
 
-	friend RepeatedSequence operator *(int times, const Sequence &s);
+	friend JMSD_FAKEIT_SHARED_INTERFACE RepeatedSequence operator *(int times, const Sequence &s);
 
 	void getInvolvedMocks(std::vector<ActualInvocationsSource *> &into) const override;
 
@@ -36,9 +38,9 @@ public:
 };
 
 
-RepeatedSequence operator *(const Sequence &s, int times);
+JMSD_FAKEIT_SHARED_INTERFACE RepeatedSequence operator *(const Sequence &s, int times);
 
-RepeatedSequence operator *(int times, const Sequence &s);
+JMSD_FAKEIT_SHARED_INTERFACE RepeatedSequence operator *(int times, const Sequence &s);
 
 
 } // namespace fakeit

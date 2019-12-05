@@ -14,6 +14,8 @@
 
 #include <vector>
 
+#include "fakeit_lib.h"
+
 
 namespace fakeit {
 
@@ -21,7 +23,7 @@ namespace fakeit {
 struct ActualInvocationsSource;
 
 
-class VerifyNoOtherInvocationsVerificationProgress {
+class JMSD_FAKEIT_SHARED_INTERFACE VerifyNoOtherInvocationsVerificationProgress {
 
 	friend class VerifyNoOtherInvocationsFunctor;
 

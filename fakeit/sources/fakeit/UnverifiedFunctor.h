@@ -3,11 +3,13 @@
 #include "FakeitContext.h"
 #include "VerifyUnverifiedFunctor.h"
 
+#include "fakeit_lib.h"
+
 
 namespace fakeit {
 
 
-class UnverifiedFunctor {
+class JMSD_FAKEIT_SHARED_INTERFACE UnverifiedFunctor {
 public:
 	UnverifiedFunctor(FakeitContext &fakeit);
 

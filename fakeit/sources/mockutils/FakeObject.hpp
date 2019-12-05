@@ -8,8 +8,9 @@
  */
 #pragma once
 
-//#include <new>
+
 #include "mockutils/VirtualTable.hpp"
+
 
 namespace fakeit {
 // silent GCC compiler warning: iso c++ forbids zero-size array [-Wpedantic]

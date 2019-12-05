@@ -23,7 +23,7 @@ class Sequence;
 class ConcatenatedSequence;
 class RepeatedSequence;
 
-class Invocation;
+struct Invocation;
 
 
 struct DefaultEventFormatter : public EventFormatter {

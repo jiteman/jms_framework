@@ -4,11 +4,13 @@
 
 #include <vector>
 
+#include "fakeit_lib.h"
+
 
 namespace fakeit {
 
 
-class ConcatenatedSequence : public virtual Sequence {
+class JMSD_FAKEIT_SHARED_INTERFACE ConcatenatedSequence : public virtual Sequence {
 private:
 	const Sequence &s1;
 	const Sequence &s2;
@@ -30,11 +32,11 @@ public:
 
 	virtual void getInvolvedMocks(std::vector<ActualInvocationsSource *> &into) const override;
 
-	friend ConcatenatedSequence operator +(const Sequence &s1, const Sequence &s2);
+	friend JMSD_FAKEIT_SHARED_INTERFACE ConcatenatedSequence operator +(const Sequence &s1, const Sequence &s2);
 };
 
 
-ConcatenatedSequence operator +(const Sequence &s1, const Sequence &s2);
+JMSD_FAKEIT_SHARED_INTERFACE ConcatenatedSequence operator +(const Sequence &s1, const Sequence &s2);
 
 
 } // namespace fakeit

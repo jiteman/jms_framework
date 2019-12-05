@@ -48,6 +48,12 @@ struct RValueTypesTests : tpunit::TestFixture {
         ) {
     }
 
+#if defined( _MSC_VER )
+#pragma warning( push )
+#pragma warning( disable: 4263 ) // '': member function does not override any base class virtual member function
+#pragma warning( disable: 4264 ) // '': no override available for virtual member function from base ''; function is hidden
+#endif
+
     void explicitStubbingDefaultReturnValues() {
         fakeit::Mock<RValueInterface> mock;     //
         When(Method(mock, intRValueArg)).Return(); //
@@ -120,5 +126,9 @@ struct RValueTypesTests : tpunit::TestFixture {
         ASSERT_EQUAL(&i, &i.operator=(i));
         ASSERT_EQUAL(&i, &i.operator=(std::move(i)));
     }
+
+#if defined( _MSC_VER )
+#pragma warning( pop )
+#endif
 
 } __RValueTypesTests;

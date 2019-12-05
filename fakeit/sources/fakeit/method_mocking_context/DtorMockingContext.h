@@ -5,11 +5,13 @@
 #include <string>
 #include <functional>
 
+#include "fakeit_lib.h"
+
 
 namespace fakeit {
 
 
-class DtorMockingContext : public MethodMockingContext<void> {
+class JMSD_FAKEIT_SHARED_INTERFACE DtorMockingContext : public MethodMockingContext<void> {
 public:
 
 	DtorMockingContext(MethodMockingContext<void>::Context *stubbingContext);

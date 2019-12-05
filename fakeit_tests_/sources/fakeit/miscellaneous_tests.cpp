@@ -53,7 +53,11 @@ struct Miscellaneous : tpunit::TestFixture
     {
         struct SomeClass
         {
-            virtual void foo() = 0;
+#if defined( _MSC_VER )
+			virtual void foo() = 0 {};
+#else
+			virtual void foo() = 0;
+#endif
         protected:
             SomeClass(int)
             {
@@ -126,7 +130,11 @@ struct Miscellaneous : tpunit::TestFixture
     void testStubFuncWithRightValueParameter() {
 
         struct Foo {
-            virtual int bar(int &&) = 0;
+#if defined( _MSC_VER )
+			virtual int bar(int &&) = 0 {};
+#else
+			virtual int bar(int &&) = 0;
+#endif
         };
 
         Mock<Foo> foo_mock;
@@ -146,7 +154,11 @@ struct Miscellaneous : tpunit::TestFixture
     void testStubProcWithRightValueParameter() {
 
         struct Foo {
-            virtual void bar(int &&) = 0;
+#if defined( _MSC_VER )
+			virtual void bar(int &&) = 0 {};
+#else
+			virtual void bar(int &&) = 0;
+#endif
         };
 
         int rv3 = 0;

@@ -9,7 +9,7 @@ namespace fakeit {
 
 
 class Sequence;
-class Invocation;
+struct Invocation;
 
 
 struct SequenceVerificationEvent : public VerificationEvent {

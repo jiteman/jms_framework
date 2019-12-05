@@ -1,9 +1,12 @@
 #pragma once
 
 
+#include "fakeit_lib.h"
+
+
 namespace fakeit {
 
-    struct MethodProxy {
+    struct JMSD_FAKEIT_SHARED_INTERFACE MethodProxy {
 
         MethodProxy(unsigned int id, unsigned int offset, void *vMethod);
 

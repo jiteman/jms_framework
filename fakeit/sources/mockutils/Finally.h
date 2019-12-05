@@ -10,19 +10,25 @@
 
 #include <functional>
 
+#include "fakeit_lib.h"
+
+
 namespace fakeit {
 
-    class Finally {
-    private:
-        std::function<void()> _finallyClause;
 
-        Finally(const Finally &);
+class JMSD_FAKEIT_SHARED_INTERFACE Finally {
+private:
+	std::function<void()> _finallyClause;
 
-        Finally &operator=(const Finally &);
+	Finally(const Finally &);
 
-    public:
-        explicit Finally(std::function<void()> f);
+	Finally &operator=(const Finally &);
 
-        ~Finally();
-    };
+public:
+	explicit Finally(std::function<void()> f);
+
+	~Finally();
+};
+
+
 }

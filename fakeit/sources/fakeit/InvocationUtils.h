@@ -11,6 +11,8 @@
 #include <unordered_set>
 #include <vector>
 
+#include "fakeit_lib.h"
+
 
 namespace fakeit {
 
@@ -21,7 +23,7 @@ struct Invocation;
 struct ActualInvocationsSource;
 
 
-struct InvocationUtils {
+struct JMSD_FAKEIT_SHARED_INTERFACE InvocationUtils {
 
 	static void sortByInvocationOrder(std::unordered_set<Invocation *> &ivocations, std::vector<Invocation *> &result);
 	static void collectActualInvocations(std::unordered_set<Invocation *> &actualInvocations, std::vector<ActualInvocationsSource *> &invocationSources);

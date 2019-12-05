@@ -102,7 +102,7 @@ struct SpyingTests: tpunit::TestFixture {
 			SomeClass() :
 					deleted(false) {
 			}
-			~SomeClass() {
+			virtual ~SomeClass() {
 				deleted = true;
 			}
 			virtual int func(int arg) {

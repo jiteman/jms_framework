@@ -8,10 +8,12 @@
 #include "fakeit/DefaultEventFormatter.h"
 #include "fakeit/AbstractFakeit.h"
 
+#include "fakeit_lib.h"
+
 
 namespace fakeit {
 
-    class DefaultFakeit : public AbstractFakeit {
+    class JMSD_FAKEIT_SHARED_INTERFACE DefaultFakeit : public AbstractFakeit {
         DefaultEventFormatter _formatter;
         fakeit::EventFormatter *_customFormatter;
         fakeit::EventHandler *_testingFrameworkAdapter;

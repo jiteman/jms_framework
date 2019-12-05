@@ -8,9 +8,10 @@
 
 #if __cplusplus > 201103L
 
-#include <string>
 #include "tpunit++.hpp"
 #include "fakeit.hpp"
+
+#include <string>
 
 using namespace fakeit;
 
@@ -73,7 +74,13 @@ struct Cpp14Tests : tpunit::TestFixture {
 
     void assingOutParamsWithLambdaCpp14(){
         struct ApiInterface {
-            virtual bool apiMethod(int a, int b, int& result) = 0;
+#if defined( _MSC_VER )
+             virtual bool apiMethod(int , int , int& ) = 0 {}
+#else
+			virtual bool apiMethod(int a, int b, int& result) = 0;
+#endif
+
+
         };
 
         Mock<ApiInterface> mock;

@@ -10,10 +10,13 @@
 
 #include "fakeit/SpyingContext.hpp"
 
+#include "fakeit_lib.h"
+
+
 namespace fakeit {
 
 
-class SpyFunctor {
+class JMSD_FAKEIT_SHARED_INTERFACE SpyFunctor {
 private:
 
 	template<typename R, typename ... arglist>

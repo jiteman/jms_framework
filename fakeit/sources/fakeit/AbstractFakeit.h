@@ -2,11 +2,13 @@
 
 #include "fakeit/FakeitContext.h"
 
+#include "fakeit_lib.h"
+
 
 namespace fakeit {
 
 
-class AbstractFakeit : public FakeitContext {
+class JMSD_FAKEIT_SHARED_INTERFACE AbstractFakeit : public FakeitContext {
 public:
 	virtual ~AbstractFakeit() = default;
 

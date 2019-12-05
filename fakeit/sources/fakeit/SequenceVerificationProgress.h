@@ -7,12 +7,14 @@
 #include "ThrowFalseEventHandler.h"
 #include "Quantity.h"
 
+#include "fakeit_lib.h"
+
 
 namespace fakeit {
 
     struct FakeitContext;
 
-    class SequenceVerificationProgress {
+    class JMSD_FAKEIT_SHARED_INTERFACE SequenceVerificationProgress {
 
         friend class UsingFunctor;
 
@@ -31,7 +33,7 @@ namespace fakeit {
 
         virtual void verifyInvocations(const int times);
 
-        class Terminator {
+        class JMSD_FAKEIT_SHARED_INTERFACE Terminator {
             smart_ptr<SequenceVerificationExpectation> _expectationPtr;
 
             bool toBool();
@@ -43,7 +45,7 @@ namespace fakeit {
         };
 
     public:
-        ~SequenceVerificationProgress() THROWS;
+        virtual ~SequenceVerificationProgress() THROWS;
         operator bool() const;
         bool operator!() const;
         Terminator Never();

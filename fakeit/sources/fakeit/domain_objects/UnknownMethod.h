@@ -2,11 +2,13 @@
 
 #include "MethodInfo.h"
 
+#include "fakeit_lib.h"
+
 
 namespace fakeit {
 
 
-struct UnknownMethod {
+struct JMSD_FAKEIT_SHARED_INTERFACE UnknownMethod {
 
    static MethodInfo &instance();
 

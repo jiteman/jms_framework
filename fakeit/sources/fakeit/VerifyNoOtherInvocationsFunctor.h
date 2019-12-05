@@ -14,11 +14,13 @@
 
 #include <vector>
 
+#include "fakeit_lib.h"
+
 
 namespace fakeit {
 
 
-class VerifyNoOtherInvocationsFunctor {
+class JMSD_FAKEIT_SHARED_INTERFACE VerifyNoOtherInvocationsFunctor {
 
 	FakeitContext &_fakeit;
 

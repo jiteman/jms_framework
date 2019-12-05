@@ -247,8 +247,6 @@ namespace fakeit {
         };
     }
 
-	extern AnyMatcher _any_; // check it
-
     template<typename T>
     internal::TypedAnyMatcher<T> Any() {
         internal::TypedAnyMatcher<T> rv;

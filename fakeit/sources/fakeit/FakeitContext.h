@@ -14,10 +14,12 @@
 #include <string>
 #include <vector>
 
+#include "fakeit_lib.h"
+
 
 namespace fakeit {
 
-    struct FakeitContext : public EventHandler, protected EventFormatter {
+    struct JMSD_FAKEIT_SHARED_INTERFACE FakeitContext : public EventHandler, protected EventFormatter {
 
         virtual ~FakeitContext() = default;
         void handle(const UnexpectedMethodCallEvent &e) override;

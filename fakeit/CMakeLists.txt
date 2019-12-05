@@ -24,6 +24,14 @@ file( GLOB_RECURSE header_and_source_files
 	${PROJECT_SOURCE_DIR}/config/standalone/*.h*
 	${PROJECT_SOURCE_DIR}/config/standalone/*.c* )
 
+if ( UNIX )
+	list( APPEND PLATFORM_SPECIC_FILES_TO_REMOVE_HEADER_AND_SOURCE "mscpp" )
+elseif( WIN32 )
+	list( APPEND PLATFORM_SPECIC_FILES_TO_REMOVE_HEADER_AND_SOURCE "gcc" )
+endif()
+
+JMSD_REMOVE_FILES_FROM_THE_LIST( header_and_source_files PLATFORM_SPECIC_FILES_TO_REMOVE_HEADER_AND_SOURCE )
+
 add_library( ${PROJECT_NAME} SHARED ${header_and_source_files} )
 
 

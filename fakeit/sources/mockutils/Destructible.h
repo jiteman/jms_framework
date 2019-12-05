@@ -7,11 +7,17 @@
  */
 #pragma once
 
+#include "fakeit_lib.h"
+
+
 namespace fakeit {
 
-    class Destructible {
-    public:
-        virtual ~Destructible();
-    };
+
+class JMSD_FAKEIT_SHARED_INTERFACE Destructible {
+
+public:
+	virtual ~Destructible();
+};
+
 
 }

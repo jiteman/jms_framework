@@ -3,11 +3,13 @@
 
 #include <string>
 
+#include "fakeit_lib.h"
+
 
 namespace fakeit {
 
 
-struct MethodInfo {
+struct JMSD_FAKEIT_SHARED_INTERFACE MethodInfo {
 
 	static unsigned int nextMethodOrdinal();
 	MethodInfo(unsigned int anId, std::string aName);
