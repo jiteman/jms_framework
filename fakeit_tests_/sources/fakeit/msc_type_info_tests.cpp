@@ -15,7 +15,9 @@
 #include <type_traits>
 
 #pragma warning( push )
+#pragma warning( disable: 4265 ) // '': class has virtual functions, but destructor is not virtual. Instances of this class may not be destructed correctly
 #pragma warning( disable: 4986 ) // '': exception specification does not match previous declaration
+
 #include "wrl\implements.h"
 #pragma warning( pop )
 
