@@ -19,9 +19,9 @@ namespace pointing {
 CULE_TEST( Shared, should_create_empty ) {
 	Shared< testing::Pointing_testing_class > empty_shared;
 
-	This( empty_shared ).should_be_empty();
-	This( empty_shared.is_not_empty() );
-	This( typeing::Memory_natural_nil ).should_be_equal_to( empty_shared.get_connectivity().get_total_connectivity() );
+	Cule_this( empty_shared ).should_be_empty();
+	Cule_this( empty_shared.is_not_empty() );
+	Cule_this( typeing::Memory_natural_nil ).should_be_equal_to( empty_shared.get_connectivity().get_total_connectivity() );
 }
 
 CULE_TEST( Shared, should_delete_empty ) {
@@ -33,10 +33,10 @@ CULE_TEST( Shared, should_delete_empty ) {
 CULE_TEST( Shared, should_be_equal_empty_empty ) {
 	const Shared< testing::Pointing_testing_class > empty_shared;
 
-	This( Shared< testing::Pointing_testing_class >() ).should_be_equal_to( Shared< testing::Pointing_testing_class >() );
-	This( empty_shared ).should_be_equal_to( empty_shared );
-	This( empty_shared ).should_be_equal_to( Shared< testing::Pointing_testing_class >() );
-	This( Shared< testing::Pointing_testing_class >() ).should_be_equal_to( empty_shared );
+	Cule_this( Shared< testing::Pointing_testing_class >() ).should_be_equal_to( Shared< testing::Pointing_testing_class >() );
+	Cule_this( empty_shared ).should_be_equal_to( empty_shared );
+	Cule_this( empty_shared ).should_be_equal_to( Shared< testing::Pointing_testing_class >() );
+	Cule_this( Shared< testing::Pointing_testing_class >() ).should_be_equal_to( empty_shared );
 }
 
 CULE_TEST( Shared, should_copy_empty ) {
@@ -44,20 +44,20 @@ CULE_TEST( Shared, should_copy_empty ) {
 	Shared< testing::Pointing_testing_class > empty_shared_1;
 	empty_shared_1 = empty_shared;
 
-	This( empty_shared ).should_be_empty();
-	This( empty_shared_1 ).should_be_empty();
-	This( empty_shared_1.is_not_empty() ).should_not_be();
-	This( typeing::Memory_natural_nil ).should_be_equal_to( empty_shared_1.get_connectivity().get_total_connectivity() );
+	Cule_this( empty_shared ).should_be_empty();
+	Cule_this( empty_shared_1 ).should_be_empty();
+	Cule_this( empty_shared_1.is_not_empty() ).should_not_be();
+	Cule_this( typeing::Memory_natural_nil ).should_be_equal_to( empty_shared_1.get_connectivity().get_total_connectivity() );
 }
 
 CULE_TEST( Shared, should_copy_construct_empty ) {
 	Shared< testing::Pointing_testing_class > empty_shared;
 	Shared< testing::Pointing_testing_class > empty_shared_1 = empty_shared;
 
-	This( empty_shared ).should_be_empty();
-	This( empty_shared_1 ).should_be_empty();
-	This( empty_shared_1.is_not_empty() ).should_not_be();
-	This( typeing::Memory_natural_nil).should_be_equal_to( empty_shared_1.get_connectivity().get_total_connectivity() );
+	Cule_this( empty_shared ).should_be_empty();
+	Cule_this( empty_shared_1 ).should_be_empty();
+	Cule_this( empty_shared_1.is_not_empty() ).should_not_be();
+	Cule_this( typeing::Memory_natural_nil).should_be_equal_to( empty_shared_1.get_connectivity().get_total_connectivity() );
 }
 
 CULE_TEST_E( Shared, should_not_dereference_empty, validating::excepting::exception_Should_with_type_information ) {
@@ -101,20 +101,20 @@ CULE_TEST( Shared, should_be_equal_equally_filled ) {
 	const Shared< testing::Pointing_testing_class > filled_shared_1 = filled_shared.get_as_weak().get_as_shared();
 	const Shared< testing::Pointing_testing_class > filled_shared_2 = filled_shared.get_as_weak().get_as_shared();
 
-	This( filled_shared_1 ).should_be_equal_to( filled_shared_1 );
-	This( filled_shared_1 ).should_be_equal_to( filled_shared_2 );
-	This( filled_shared_2 ).should_be_equal_to( filled_shared_1 );
-	This( filled_shared_2 ).should_be_equal_to( filled_shared_2 );
+	Cule_this( filled_shared_1 ).should_be_equal_to( filled_shared_1 );
+	Cule_this( filled_shared_1 ).should_be_equal_to( filled_shared_2 );
+	Cule_this( filled_shared_2 ).should_be_equal_to( filled_shared_1 );
+	Cule_this( filled_shared_2 ).should_be_equal_to( filled_shared_2 );
 }
 
 CULE_TEST( Shared, should_not_be_equal_differently_filled ) {
 	const Shared< testing::Pointing_testing_class > filled_shared = testing::Pointing_testing_class::create_shared_testing_object();
 	const Shared< testing::Pointing_testing_class > filled_shared_1 = testing::Pointing_testing_class::create_shared_testing_object();
 
-	This( filled_shared ).should_be_equal_to( filled_shared );
-	This( filled_shared ).should_not_be_equal_to( filled_shared_1 );
-	This( filled_shared_1 ).should_not_be_equal_to( filled_shared );
-	This( filled_shared_1 ).should_be_equal_to( filled_shared_1 );
+	Cule_this( filled_shared ).should_be_equal_to( filled_shared );
+	Cule_this( filled_shared ).should_not_be_equal_to( filled_shared_1 );
+	Cule_this( filled_shared_1 ).should_not_be_equal_to( filled_shared );
+	Cule_this( filled_shared_1 ).should_be_equal_to( filled_shared_1 );
 }
 
 CULE_TEST( Shared, should_copy ) {

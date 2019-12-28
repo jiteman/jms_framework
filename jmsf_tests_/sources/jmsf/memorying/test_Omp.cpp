@@ -68,7 +68,7 @@ CULE_TEST( Omp, should_copy_construct_empty ) {
 	this_object_should_be_empty( empty_omp );
 	these_solids_should_be_equal( empty_omp, omp_to_empty );
 
-	This( omp_to_empty ).should_be_equal_to( empty_omp );
+	Cule_this( omp_to_empty ).should_be_equal_to( empty_omp );
 }
 
 //TEST_EXCEPTION( Omp, should_not_get_empty, validating::excepting::exception_Should_with_type_information ) {

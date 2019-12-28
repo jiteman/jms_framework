@@ -44,7 +44,7 @@ public:
 CULE_TEST( Tavl_tree, should_create_empty ) {
 	Mn_tavl_tree empty_tavl_tree;
 
-	This( empty_tavl_tree ).should_be_empty();
+	Cule_this( empty_tavl_tree ).should_be_empty();
 }
 
 CULE_TEST( Tavl_tree, should_delete_empty ) {
@@ -62,7 +62,7 @@ CULE_TEST( Tavl_tree, should_run_test_for_avl_tree_example ) {
 
 //	tavl_tree->insert( testing::testing_Allocators::instance()->get_testing_object_allocator(), typeing::Memory_natural_one );
 
-//	This( **tavl_tree->find( typeing::Memory_natural_one ) ).should_be_equal_to( typeing::Memory_natural_one );
+//	Cule_this( **tavl_tree->find( typeing::Memory_natural_one ) ).should_be_equal_to( typeing::Memory_natural_one );
 //}
 
 //CULE_TEST( Tavl_tree, should_maintain_3_objects ) {
@@ -73,7 +73,7 @@ CULE_TEST( Tavl_tree, should_run_test_for_avl_tree_example ) {
 
 //	tavl_tree->insert( tavl_node );
 
-//	This( *tavl_tree->find( typeing::Memory_natural_one ) ).should_be_equal_to( *tavl_node );
+//	Cule_this( *tavl_tree->find( typeing::Memory_natural_one ) ).should_be_equal_to( *tavl_node );
 //}
 
 

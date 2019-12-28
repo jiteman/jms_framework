@@ -19,8 +19,8 @@ native_Scoped< native_Reference_counters > create_scoped_native_reference_counte
 CULE_TEST( native_Reference_counters, should_not_have_nil_counters_after_creation ) {
 	native_Scoped< native_Reference_counters > reference_counters = create_scoped_native_reference_counters();
 
-	This_native( reference_counters->is_shared_counter_nil() ).should_not_be();
-	This_native( reference_counters->is_total_counter_nil() ).should_not_be();
+	Cule_this_native( reference_counters->is_shared_counter_nil() ).should_not_be();
+	Cule_this_native( reference_counters->is_total_counter_nil() ).should_not_be();
 }
 
 CULE_TEST( native_Reference_counters, should_have_nil_counters_after_decreasing_the_last_shared_counter_only ) {
@@ -28,8 +28,8 @@ CULE_TEST( native_Reference_counters, should_have_nil_counters_after_decreasing_
 
 	reference_counters->decrease_shared_counter();
 
-	This_native( reference_counters->is_shared_counter_nil() ).should_be();
-	This_native( reference_counters->is_total_counter_nil() ).should_be();
+	Cule_this_native( reference_counters->is_shared_counter_nil() ).should_be();
+	Cule_this_native( reference_counters->is_total_counter_nil() ).should_be();
 }
 
 CULE_TEST( native_Reference_counters, should_have_no_nil_total_counter_after_increasing_weak_counter ) {
@@ -37,8 +37,8 @@ CULE_TEST( native_Reference_counters, should_have_no_nil_total_counter_after_inc
 
 	reference_counters->increase_weak_counter();
 
-	This_native( reference_counters->is_shared_counter_nil() ).should_not_be();
-	This_native( reference_counters->is_total_counter_nil() ).should_not_be();
+	Cule_this_native( reference_counters->is_shared_counter_nil() ).should_not_be();
+	Cule_this_native( reference_counters->is_total_counter_nil() ).should_not_be();
 }
 
 CULE_TEST( native_Reference_counters, should_have_total_counter_equal_to_sum_of_shared_and_weak_counters ) {
@@ -50,8 +50,8 @@ CULE_TEST( native_Reference_counters, should_have_total_counter_equal_to_sum_of_
 	reference_counters->increase_weak_counter();
 	reference_counters->increase_weak_counter();
 
-	This_native( reference_counters->get_shared_counter() ).should_be_equal_to( 3 );
-	This_native( reference_counters->get_total_counter() ).should_be_equal_to( 6 );
+	Cule_this_native( reference_counters->get_shared_counter() ).should_be_equal_to( 3 );
+	Cule_this_native( reference_counters->get_total_counter() ).should_be_equal_to( 6 );
 }
 
 CULE_TEST_E(

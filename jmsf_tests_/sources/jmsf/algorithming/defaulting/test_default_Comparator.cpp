@@ -45,21 +45,21 @@ public:
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 // Naturals
 CULE_TEST_F( default_Comparator_for_naturals, should_return_equal_result_if_values_are_equal ) {
-	This( fx_.comparator->compare( fx_.natural_0, fx_.natural_0 ).is_equal() ).should_be();
-	This( fx_.comparator->compare( fx_.natural_3, fx_.natural_3 ).is_equal() ).should_be();
-	This( fx_.comparator->compare( fx_.natural_7, fx_.natural_7 ).is_equal() ).should_be();
+	Cule_this( fx_.comparator->compare( fx_.natural_0, fx_.natural_0 ).is_equal() ).should_be();
+	Cule_this( fx_.comparator->compare( fx_.natural_3, fx_.natural_3 ).is_equal() ).should_be();
+	Cule_this( fx_.comparator->compare( fx_.natural_7, fx_.natural_7 ).is_equal() ).should_be();
 }
 
 CULE_TEST_F( default_Comparator_for_naturals, should_return_greater_result_if_first_value_is_greater_than_second_one ) {
-	This( fx_.comparator->compare( fx_.natural_1, fx_.natural_0 ).is_greater() ).should_be();
-	This( fx_.comparator->compare( fx_.natural_5, fx_.natural_3 ).is_greater() ).should_be();
-	This( fx_.comparator->compare( fx_.natural_7, fx_.natural_6 ).is_greater() ).should_be();
+	Cule_this( fx_.comparator->compare( fx_.natural_1, fx_.natural_0 ).is_greater() ).should_be();
+	Cule_this( fx_.comparator->compare( fx_.natural_5, fx_.natural_3 ).is_greater() ).should_be();
+	Cule_this( fx_.comparator->compare( fx_.natural_7, fx_.natural_6 ).is_greater() ).should_be();
 }
 
 CULE_TEST_F( default_Comparator_for_naturals, should_return_less_result_if_first_value_is_less_than_second_one ) {
-	This( fx_.comparator->compare( fx_.natural_0, fx_.natural_1 ).is_less() ).should_be();
-	This( fx_.comparator->compare( fx_.natural_3, fx_.natural_5 ).is_less() ).should_be();
-	This( fx_.comparator->compare( fx_.natural_6, fx_.natural_7 ).is_less() ).should_be();
+	Cule_this( fx_.comparator->compare( fx_.natural_0, fx_.natural_1 ).is_less() ).should_be();
+	Cule_this( fx_.comparator->compare( fx_.natural_3, fx_.natural_5 ).is_less() ).should_be();
+	Cule_this( fx_.comparator->compare( fx_.natural_6, fx_.natural_7 ).is_less() ).should_be();
 }
 
 // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
@@ -86,55 +86,55 @@ public:
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 // Integers (positive)
 CULE_TEST_F( default_Comparator_for_integers, should_return_equal_result_if_values_are_equal ) {
-	This( fx_.comparator->compare( fx_.integer_0, fx_.integer_0 ).is_equal() ).should_be();
-	This( fx_.comparator->compare( fx_.integer_3, fx_.integer_3 ).is_equal() ).should_be();
-	This( fx_.comparator->compare( fx_.integer_7, fx_.integer_7 ).is_equal() ).should_be();
+	Cule_this( fx_.comparator->compare( fx_.integer_0, fx_.integer_0 ).is_equal() ).should_be();
+	Cule_this( fx_.comparator->compare( fx_.integer_3, fx_.integer_3 ).is_equal() ).should_be();
+	Cule_this( fx_.comparator->compare( fx_.integer_7, fx_.integer_7 ).is_equal() ).should_be();
 }
 
 CULE_TEST_F( default_Comparator_for_integers, should_return_greater_result_if_first_value_is_greater_than_second_one ) {
-	This( fx_.comparator->compare( fx_.integer_1, fx_.integer_0 ).is_greater() ).should_be();
-	This( fx_.comparator->compare( fx_.integer_5, fx_.integer_3 ).is_greater() ).should_be();
-	This( fx_.comparator->compare( fx_.integer_7, fx_.integer_6 ).is_greater() ).should_be();
+	Cule_this( fx_.comparator->compare( fx_.integer_1, fx_.integer_0 ).is_greater() ).should_be();
+	Cule_this( fx_.comparator->compare( fx_.integer_5, fx_.integer_3 ).is_greater() ).should_be();
+	Cule_this( fx_.comparator->compare( fx_.integer_7, fx_.integer_6 ).is_greater() ).should_be();
 }
 
 CULE_TEST_F( default_Comparator_for_integers, should_return_less_result_if_first_value_is_less_than_second_one ) {
-	This( fx_.comparator->compare( fx_.integer_0, fx_.integer_1 ).is_less() ).should_be();
-	This( fx_.comparator->compare( fx_.integer_3, fx_.integer_5 ).is_less() ).should_be();
-	This( fx_.comparator->compare( fx_.integer_6, fx_.integer_7 ).is_less() ).should_be();
+	Cule_this( fx_.comparator->compare( fx_.integer_0, fx_.integer_1 ).is_less() ).should_be();
+	Cule_this( fx_.comparator->compare( fx_.integer_3, fx_.integer_5 ).is_less() ).should_be();
+	Cule_this( fx_.comparator->compare( fx_.integer_6, fx_.integer_7 ).is_less() ).should_be();
 }
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 // Integers (negative)
 CULE_TEST_F( default_Comparator_for_integers, should_return_equal_result_if_negative_values_are_equal ) {
-	This( fx_.comparator->compare( fx_.integer_0, fx_.integer_0 ).is_equal() ).should_be();
-	This( fx_.comparator->compare( fx_.integer_3m, fx_.integer_3m ).is_equal() ).should_be();
-	This( fx_.comparator->compare( fx_.integer_7m, fx_.integer_7m ).is_equal() ).should_be();
+	Cule_this( fx_.comparator->compare( fx_.integer_0, fx_.integer_0 ).is_equal() ).should_be();
+	Cule_this( fx_.comparator->compare( fx_.integer_3m, fx_.integer_3m ).is_equal() ).should_be();
+	Cule_this( fx_.comparator->compare( fx_.integer_7m, fx_.integer_7m ).is_equal() ).should_be();
 }
 
 CULE_TEST_F( default_Comparator_for_integers, should_return_greater_result_if_first_negative_value_is_greater_than_second_negative_one ) {
-	This( fx_.comparator->compare( fx_.integer_0, fx_.integer_1m ).is_greater() ).should_be();
-	This( fx_.comparator->compare( fx_.integer_3m, fx_.integer_5m ).is_greater() ).should_be();
-	This( fx_.comparator->compare( fx_.integer_6m, fx_.integer_7m ).is_greater() ).should_be();
+	Cule_this( fx_.comparator->compare( fx_.integer_0, fx_.integer_1m ).is_greater() ).should_be();
+	Cule_this( fx_.comparator->compare( fx_.integer_3m, fx_.integer_5m ).is_greater() ).should_be();
+	Cule_this( fx_.comparator->compare( fx_.integer_6m, fx_.integer_7m ).is_greater() ).should_be();
 }
 
 CULE_TEST_F( default_Comparator_for_integers, should_return_less_result_if_first_negative_value_is_less_than_second_negative_one ) {
-	This( fx_.comparator->compare( fx_.integer_1m, fx_.integer_0 ).is_less() ).should_be();
-	This( fx_.comparator->compare( fx_.integer_5m, fx_.integer_3m ).is_less() ).should_be();
-	This( fx_.comparator->compare( fx_.integer_7m, fx_.integer_6m ).is_less() ).should_be();
+	Cule_this( fx_.comparator->compare( fx_.integer_1m, fx_.integer_0 ).is_less() ).should_be();
+	Cule_this( fx_.comparator->compare( fx_.integer_5m, fx_.integer_3m ).is_less() ).should_be();
+	Cule_this( fx_.comparator->compare( fx_.integer_7m, fx_.integer_6m ).is_less() ).should_be();
 }
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 // Integers (positive and negative)
 CULE_TEST_F( default_Comparator_for_integers, should_return_greater_result_if_first_value_is_positive_and_second_one_is_negative ) {
-	This( fx_.comparator->compare( fx_.integer_1, fx_.integer_1m ).is_greater() ).should_be();
-	This( fx_.comparator->compare( fx_.integer_3, fx_.integer_3m ).is_greater() ).should_be();
-	This( fx_.comparator->compare( fx_.integer_6, fx_.integer_6m ).is_greater() ).should_be();
+	Cule_this( fx_.comparator->compare( fx_.integer_1, fx_.integer_1m ).is_greater() ).should_be();
+	Cule_this( fx_.comparator->compare( fx_.integer_3, fx_.integer_3m ).is_greater() ).should_be();
+	Cule_this( fx_.comparator->compare( fx_.integer_6, fx_.integer_6m ).is_greater() ).should_be();
 }
 
 CULE_TEST_F( default_Comparator_for_integers, should_return_less_result_if_first_value_is_negative_and_second_one_is_positive ) {
-	This( fx_.comparator->compare( fx_.integer_1m, fx_.integer_1 ).is_less() ).should_be();
-	This( fx_.comparator->compare( fx_.integer_5m, fx_.integer_5 ).is_less() ).should_be();
-	This( fx_.comparator->compare( fx_.integer_7m, fx_.integer_7 ).is_less() ).should_be();
+	Cule_this( fx_.comparator->compare( fx_.integer_1m, fx_.integer_1 ).is_less() ).should_be();
+	Cule_this( fx_.comparator->compare( fx_.integer_5m, fx_.integer_5 ).is_less() ).should_be();
+	Cule_this( fx_.comparator->compare( fx_.integer_7m, fx_.integer_7 ).is_less() ).should_be();
 }
 
 

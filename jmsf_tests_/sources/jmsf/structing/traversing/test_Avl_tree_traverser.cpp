@@ -77,24 +77,24 @@ public:
 
 // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 CULE_TEST_F( Avl_tree_traverser, should_be_empty_after_creation ) {
-	This( fx_.traverser ).should_be_empty();
+	Cule_this( fx_.traverser ).should_be_empty();
 }
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 CULE_TEST_F( Avl_tree_traverser, should_not_be_empty_when_holds_an_object ) {
 	fx_.traverser = Avl_tree_traverser< typeing::Memory_natural >::create( fx_.dummy_avl_tree.get_as_womp(), fx_.node_with_1 );
 
-	This( fx_.traverser ).should_not_be_empty();
+	Cule_this( fx_.traverser ).should_not_be_empty();
 }
 
 CULE_TEST_F( Avl_tree_traverser, should_return_object_it_holds ) {
 	fx_.traverser = Avl_tree_traverser< typeing::Memory_natural >::create( fx_.dummy_avl_tree.get_as_womp(), fx_.node_with_1 );
 	Avl_tree_traverser< typeing::Memory_natural > traverser = Avl_tree_traverser< typeing::Memory_natural >::create( fx_.dummy_avl_tree.get_as_womp(), fx_.node_with_1 );
 
-	This( fx_.traverser.get_object() ).should_be_equal_to( fx_.value_1 );
-	This( fx_.traverser.get_object() ).should_not_be_equal_to( fx_.value_0 );
-	This( traverser.get_object() ).should_be_equal_to( fx_.value_1 );
-	This( traverser.get_object() ).should_not_be_equal_to( fx_.value_2 );
+	Cule_this( fx_.traverser.get_object() ).should_be_equal_to( fx_.value_1 );
+	Cule_this( fx_.traverser.get_object() ).should_not_be_equal_to( fx_.value_0 );
+	Cule_this( traverser.get_object() ).should_be_equal_to( fx_.value_1 );
+	Cule_this( traverser.get_object() ).should_not_be_equal_to( fx_.value_2 );
 }
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -103,8 +103,8 @@ CULE_TEST_F( Avl_tree_traverser, should_navigate_to_left_child ) {
 
 	fx_.traverser.move_one_step_down_left();
 
-	This( fx_.traverser.get_object() ).should_be_equal_to( fx_.left_child.get_object() );
-	This( fx_.traverser.take_object() ).should_be_equal_to( fx_.left_child.get_object() );
+	Cule_this( fx_.traverser.get_object() ).should_be_equal_to( fx_.left_child.get_object() );
+	Cule_this( fx_.traverser.take_object() ).should_be_equal_to( fx_.left_child.get_object() );
 }
 
 CULE_TEST_F( Avl_tree_traverser, should_navigate_to_right_child ) {
@@ -112,8 +112,8 @@ CULE_TEST_F( Avl_tree_traverser, should_navigate_to_right_child ) {
 
 	fx_.traverser.move_one_step_down_right();
 
-	This( fx_.traverser.get_object() ).should_be_equal_to( fx_.right_child.get_object() );
-	This( fx_.traverser.take_object() ).should_be_equal_to( fx_.right_child.get_object() );
+	Cule_this( fx_.traverser.get_object() ).should_be_equal_to( fx_.right_child.get_object() );
+	Cule_this( fx_.traverser.take_object() ).should_be_equal_to( fx_.right_child.get_object() );
 }
 
 CULE_TEST_F( Avl_tree_traverser, should_navigate_to_parent_from_left_child ) {
@@ -121,8 +121,8 @@ CULE_TEST_F( Avl_tree_traverser, should_navigate_to_parent_from_left_child ) {
 
 	fx_.traverser.move_one_step_up();
 
-	This( fx_.traverser.get_object() ).should_be_equal_to( fx_.parent.get_object() );
-	This( fx_.traverser.take_object() ).should_be_equal_to( fx_.parent.get_object() );
+	Cule_this( fx_.traverser.get_object() ).should_be_equal_to( fx_.parent.get_object() );
+	Cule_this( fx_.traverser.take_object() ).should_be_equal_to( fx_.parent.get_object() );
 }
 
 CULE_TEST_F( Avl_tree_traverser, should_navigate_to_parent_from_right_child ) {
@@ -130,8 +130,8 @@ CULE_TEST_F( Avl_tree_traverser, should_navigate_to_parent_from_right_child ) {
 
 	fx_.traverser.move_one_step_up();
 
-	This( fx_.traverser.get_object() ).should_be_equal_to( fx_.parent.get_object() );
-	This( fx_.traverser.take_object() ).should_be_equal_to( fx_.parent.get_object() );
+	Cule_this( fx_.traverser.get_object() ).should_be_equal_to( fx_.parent.get_object() );
+	Cule_this( fx_.traverser.take_object() ).should_be_equal_to( fx_.parent.get_object() );
 }
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -139,16 +139,16 @@ CULE_TEST_F( Avl_tree_traverser, should_navigate_back_and_forth ) {
 	fx_.traverser = fx_.left_child;
 
 	fx_.traverser.move_one_step_up();
-	This( fx_.traverser.get_object() ).should_be_equal_to( fx_.parent.get_object() );
+	Cule_this( fx_.traverser.get_object() ).should_be_equal_to( fx_.parent.get_object() );
 
 	fx_.traverser.move_one_step_down_right();
-	This( fx_.traverser.get_object() ).should_be_equal_to( fx_.right_child.get_object() );
+	Cule_this( fx_.traverser.get_object() ).should_be_equal_to( fx_.right_child.get_object() );
 
 	fx_.traverser.move_one_step_up();
-	This( fx_.traverser.get_object() ).should_be_equal_to( fx_.parent.get_object() );
+	Cule_this( fx_.traverser.get_object() ).should_be_equal_to( fx_.parent.get_object() );
 
 	fx_.traverser.move_one_step_down_left();
-	This( fx_.traverser.get_object() ).should_be_equal_to( fx_.left_child.get_object() );
+	Cule_this( fx_.traverser.get_object() ).should_be_equal_to( fx_.left_child.get_object() );
 }
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -157,7 +157,7 @@ CULE_TEST_F( Avl_tree_traverser, should_not_navigate_outside_the_parent_node ) {
 
 	fx_.traverser.move_one_step_up();
 
-	This( fx_.traverser ).should_be_empty();
+	Cule_this( fx_.traverser ).should_be_empty();
 }
 
 CULE_TEST_F( Avl_tree_traverser, should_not_navigate_outside_the_left_child_node_to_the_left ) {
@@ -165,7 +165,7 @@ CULE_TEST_F( Avl_tree_traverser, should_not_navigate_outside_the_left_child_node
 
 	fx_.traverser.move_one_step_down_left();
 
-	This( fx_.traverser ).should_be_empty();
+	Cule_this( fx_.traverser ).should_be_empty();
 }
 
 CULE_TEST_F( Avl_tree_traverser, should_not_navigate_outside_the_left_child_node_to_the_right ) {
@@ -173,7 +173,7 @@ CULE_TEST_F( Avl_tree_traverser, should_not_navigate_outside_the_left_child_node
 
 	fx_.traverser.move_one_step_down_right();
 
-	This( fx_.traverser ).should_be_empty();
+	Cule_this( fx_.traverser ).should_be_empty();
 }
 
 CULE_TEST_F( Avl_tree_traverser, should_not_navigate_outside_the_right_child_node_to_the_left ) {
@@ -181,7 +181,7 @@ CULE_TEST_F( Avl_tree_traverser, should_not_navigate_outside_the_right_child_nod
 
 	fx_.traverser.move_one_step_down_left();
 
-	This( fx_.traverser ).should_be_empty();
+	Cule_this( fx_.traverser ).should_be_empty();
 }
 
 CULE_TEST_F( Avl_tree_traverser, should_not_navigate_outside_the_right_child_node_to_the_right ) {
@@ -189,7 +189,7 @@ CULE_TEST_F( Avl_tree_traverser, should_not_navigate_outside_the_right_child_nod
 
 	fx_.traverser.move_one_step_down_right();
 
-	This( fx_.traverser ).should_be_empty();
+	Cule_this( fx_.traverser ).should_be_empty();
 }
 
 

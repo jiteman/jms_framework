@@ -11,7 +11,7 @@ CULE_TEST( New_notation, should_be_true_false_correct ) {
 	const typeing::Boolean true_value = typeing::True;
 	const typeing::Boolean false_value = typeing::False;
 
-	This( true_value ).should_not_be_equal_to( false_value );
+	Cule_this( true_value ).should_not_be_equal_to( false_value );
 }
 
 

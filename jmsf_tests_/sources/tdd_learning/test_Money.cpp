@@ -55,8 +55,8 @@ public:
 
 
 CULE_TEST_F( Money, should_return_correct_currencies ) {
-	This( fx_.usd_currency ).should_be_equal_to( Money::create_as_dollar( fx_.real_1 )->get_currency() );
-	This( fx_.franc_currency ).should_be_equal_to( Money::create_as_franc( fx_.real_1 )->get_currency() );
+	Cule_this( fx_.usd_currency ).should_be_equal_to( Money::create_as_dollar( fx_.real_1 )->get_currency() );
+	Cule_this( fx_.franc_currency ).should_be_equal_to( Money::create_as_franc( fx_.real_1 )->get_currency() );
 }
 
 CULE_TEST_F( Money, should_be_equal ) {

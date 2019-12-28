@@ -33,10 +33,10 @@ CULE_TEST( Weak, should_delete_empty ) {
 CULE_TEST( Weak, should_be_equal_empty_empty ) {
 	const Weak< testing::Pointing_testing_class > empty_weak;
 
-	This( Weak< testing::Pointing_testing_class >() ).should_be_equal_to( Weak< testing::Pointing_testing_class >() );
-	This( empty_weak ).should_be_equal_to( empty_weak );
-	This( empty_weak ).should_be_equal_to( Weak< testing::Pointing_testing_class >() );
-	This( Weak< testing::Pointing_testing_class >() ).should_be_equal_to( empty_weak );
+	Cule_this( Weak< testing::Pointing_testing_class >() ).should_be_equal_to( Weak< testing::Pointing_testing_class >() );
+	Cule_this( empty_weak ).should_be_equal_to( empty_weak );
+	Cule_this( empty_weak ).should_be_equal_to( Weak< testing::Pointing_testing_class >() );
+	Cule_this( Weak< testing::Pointing_testing_class >() ).should_be_equal_to( empty_weak );
 }
 
 CULE_TEST( Weak, should_copy_empty ) {

@@ -36,22 +36,22 @@ CULE_MOCK( native_Reference_counters ) {
 public:
 //	void increase_shared_counter() override {
 //		native_Reference_counters::increase_shared_counter();
-//		this->take_sensor().increase( 0 );
+//		Cule_this->take_sensor().increase( 0 );
 //	}
 
 //	void decrease_shared_counter() override {
 //		native_Reference_counters::decrease_shared_counter();
-//		this->take_sensor().decrease( 0 );
+//		Cule_this->take_sensor().decrease( 0 );
 //	}
 
 //	void increase_weak_counter() override {
 //		native_Reference_counters::increase_weak_counter();
-//		this->take_sensor().increase( 1 );
+//		Cule_this->take_sensor().increase( 1 );
 //	}
 
 //	void decrease_weak_counter() override {
 //		native_Reference_counters::decrease_weak_counter();
-//		this->take_sensor().decrease( 1 );
+//		Cule_this->take_sensor().decrease( 1 );
 //	}
 
 public: // virtual native_Reference_counter
@@ -74,14 +74,14 @@ native_Object_with_reference_counters< testing::Nativing_testing_class > create_
 CULE_TEST( native_Object_with_reference_counters, should_be_empty_after_creation ) {
 	native_Object_with_reference_counters< testing::Nativing_testing_class > empty_object;
 
-	This_native( empty_object ).should_be_empty();
+	Cule_this_native( empty_object ).should_be_empty();
 }
 
 CULE_TEST( native_Object_with_reference_counters, not_be_empty_when_created_with_object ) {
 	native_Object_with_reference_counters< testing::Nativing_testing_class > native_object =
 		create_native_object_with_reference_counter();
 
-	This_native( native_object ).should_not_be_empty();
+	Cule_this_native( native_object ).should_not_be_empty();
 }
 
 CULE_TEST( native_Object_with_reference_counters, should_delete_reference_counters ) {
@@ -96,7 +96,7 @@ CULE_TEST( native_Object_with_reference_counters, should_delete_reference_counte
 				testing::Nativing_testing_class::create_new() );
 	}
 
-	This( the_mock_sensor->is_touched( 0 ) ).should_be(); // destructor
+	Cule_this( the_mock_sensor->is_touched( 0 ) ).should_be(); // destructor
 }
 
 

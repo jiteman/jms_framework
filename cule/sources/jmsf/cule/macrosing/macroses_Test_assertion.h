@@ -6,11 +6,11 @@
 #include "jmsf/cule/asserting/stl_Assertion.hin"
 
 
-#define This( actual_value ) \
+#define Cule_this( actual_value ) \
 	::jmsf::cule::asserting::create_assertion( ( actual_value ), JMSF_FILE_AND_LINE )
 
-#define This_native( actual_value ) \
+#define Cule_this_native( actual_value ) \
 	::jmsf::cule::asserting::create_native_assertion( ( actual_value ), JMSF_FILE_AND_LINE )
 
-#define This_stl( actual_value ) \
+#define Cule_this_stl( actual_value ) \
 	::jmsf::cule::assering::create_stl_assertion( ( actual_value ), JMSF_FILE_AND_LINE )

@@ -24,7 +24,7 @@ typedef testing::Testing_object_creator< Mn_tavl_node > Mn_tavl_node_factory;
 CULE_TEST( Tavl_node, should_create_empty ) {
 	Mn_tavl_node empty_node;
 
-	This( empty_node ).should_be_empty();
+	Cule_this( empty_node ).should_be_empty();
 }
 
 CULE_TEST( Tavl_node, should_delete_empty ) {
@@ -36,10 +36,10 @@ CULE_TEST( Tavl_node, should_delete_empty ) {
 CULE_TEST( Tavl_node, should_be_equal_empty_empty ) {
 	Mn_tavl_node empty_node;
 
-	This( Mn_tavl_node() ).should_be_equal_to( Mn_tavl_node() );
-	This( empty_node ).should_be_equal_to( empty_node );
-	This( empty_node ).should_be_equal_to( Mn_tavl_node() );
-	This( Mn_tavl_node() ).should_be_equal_to( empty_node );
+	Cule_this( Mn_tavl_node() ).should_be_equal_to( Mn_tavl_node() );
+	Cule_this( empty_node ).should_be_equal_to( empty_node );
+	Cule_this( empty_node ).should_be_equal_to( Mn_tavl_node() );
+	Cule_this( Mn_tavl_node() ).should_be_equal_to( empty_node );
 }
 
 CULE_TEST( Tavl_node, should_maintain_left_child ) {
@@ -50,7 +50,7 @@ CULE_TEST( Tavl_node, should_maintain_left_child ) {
 
 	the_node->set_left_child( left_node );
 
-	This( the_node->get_left_child() ).should_be_equal_to( left_node );
+	Cule_this( the_node->get_left_child() ).should_be_equal_to( left_node );
 }
 
 CULE_TEST( Tavl_node, should_maintain_right_child ) {
@@ -61,7 +61,7 @@ CULE_TEST( Tavl_node, should_maintain_right_child ) {
 
 	the_node->set_right_child( right_node );
 
-	This( the_node->get_right_child() ).should_be_equal_to( right_node );
+	Cule_this( the_node->get_right_child() ).should_be_equal_to( right_node );
 }
 
 

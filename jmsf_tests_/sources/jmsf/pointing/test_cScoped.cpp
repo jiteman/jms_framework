@@ -15,8 +15,8 @@ namespace pointing {
 CULE_TEST( test_cScoped, should_create_empty ) {
 	cScoped< testing::Pointing_testing_class > empty_scoped;
 
-	This( empty_scoped ).should_be_empty();
-	This( empty_scoped.is_not_empty() ).should_not_be();
+	Cule_this( empty_scoped ).should_be_empty();
+	Cule_this( empty_scoped.is_not_empty() ).should_not_be();
 //	this_object_should_be_empty( empty_scoped );
 //	this_should_not_be( empty_scoped.is_not_empty() );
 }

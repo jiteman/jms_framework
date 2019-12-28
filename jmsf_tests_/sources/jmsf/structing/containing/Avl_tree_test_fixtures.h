@@ -91,27 +91,27 @@ public:
 		traversing::Avl_tree_traverser< typeing::Memory_natural > traverser = avl_tree->find( natural_20 );
 
 		// root node 20
-		This( traverser ).should_not_be_empty();
-		This( traverser.get_object() ).should_be_equal_to( natural_20 );
-		This( traverser.get_node()->get_left_child() ).should_not_be_empty();
-		This( traverser.get_node()->get_left_child()->get_object() ).should_be_equal_to( natural_10 );
-		This( traverser.get_node()->get_right_child() ).should_not_be_empty();
-		This( traverser.get_node()->get_right_child()->get_object() ).should_be_equal_to( natural_30 );
+		Cule_this( traverser ).should_not_be_empty();
+		Cule_this( traverser.get_object() ).should_be_equal_to( natural_20 );
+		Cule_this( traverser.get_node()->get_left_child() ).should_not_be_empty();
+		Cule_this( traverser.get_node()->get_left_child()->get_object() ).should_be_equal_to( natural_10 );
+		Cule_this( traverser.get_node()->get_right_child() ).should_not_be_empty();
+		Cule_this( traverser.get_node()->get_right_child()->get_object() ).should_be_equal_to( natural_30 );
 
 		// node 10
 		traverser.move_one_step_down_left();
-		This( traverser ).should_not_be_empty();
-		This( traverser.get_object() ).should_be_equal_to( natural_10 );
-		This( traverser.get_node()->get_left_child() ).should_be_empty();
-		This( traverser.get_node()->get_right_child() ).should_be_empty();
+		Cule_this( traverser ).should_not_be_empty();
+		Cule_this( traverser.get_object() ).should_be_equal_to( natural_10 );
+		Cule_this( traverser.get_node()->get_left_child() ).should_be_empty();
+		Cule_this( traverser.get_node()->get_right_child() ).should_be_empty();
 
 		// node 30
 		traverser.move_one_step_up();
 		traverser.move_one_step_down_right();
-		This( traverser ).should_not_be_empty();
-		This( traverser.get_object() ).should_be_equal_to( natural_30 );
-		This( traverser.get_node()->get_left_child() ).should_be_empty();
-		This( traverser.get_node()->get_right_child() ).should_be_empty();
+		Cule_this( traverser ).should_not_be_empty();
+		Cule_this( traverser.get_object() ).should_be_equal_to( natural_30 );
+		Cule_this( traverser.get_node()->get_left_child() ).should_be_empty();
+		Cule_this( traverser.get_node()->get_right_child() ).should_be_empty();
 
 		return typeing::True;
 	}
@@ -120,21 +120,21 @@ public:
 		traversing::Avl_tree_traverser< typeing::Memory_natural > traverser = avl_tree->find( natural_20 );
 
 		// root node 20
-		This( traverser ).should_not_be_empty();
-		This( traverser.get_node()->get_parent() ).should_be_empty();
+		Cule_this( traverser ).should_not_be_empty();
+		Cule_this( traverser.get_node()->get_parent() ).should_be_empty();
 
 		// node 10
 		traverser.move_one_step_down_left();
-		This( traverser ).should_not_be_empty();
-		This( traverser.get_node()->get_parent() ).should_not_be_empty();
-		This( traverser.get_node()->get_parent()->get_object() ).should_be_equal_to( natural_20 );
+		Cule_this( traverser ).should_not_be_empty();
+		Cule_this( traverser.get_node()->get_parent() ).should_not_be_empty();
+		Cule_this( traverser.get_node()->get_parent()->get_object() ).should_be_equal_to( natural_20 );
 
 		// node 30
 		traverser.move_one_step_up();
 		traverser.move_one_step_down_right();
-		This( traverser ).should_not_be_empty();
-		This( traverser.get_node()->get_parent() ).should_not_be_empty();
-		This( traverser.get_node()->get_parent()->get_object() ).should_be_equal_to( natural_20 );
+		Cule_this( traverser ).should_not_be_empty();
+		Cule_this( traverser.get_node()->get_parent() ).should_not_be_empty();
+		Cule_this( traverser.get_node()->get_parent()->get_object() ).should_be_equal_to( natural_20 );
 
 		return typeing::True;
 	}
@@ -143,19 +143,19 @@ public:
 		traversing::Avl_tree_traverser< typeing::Memory_natural > traverser = avl_tree->find( natural_20 );
 
 		// root node 20
-		This( traverser ).should_not_be_empty();
-		This( traverser.get_node()->get_height() ).should_be_equal_to( natural_2 );
+		Cule_this( traverser ).should_not_be_empty();
+		Cule_this( traverser.get_node()->get_height() ).should_be_equal_to( natural_2 );
 
 		// node 10
 		traverser.move_one_step_down_left();
-		This( traverser ).should_not_be_empty();
-		This( traverser.get_node()->get_height() ).should_be_equal_to( natural_1 );
+		Cule_this( traverser ).should_not_be_empty();
+		Cule_this( traverser.get_node()->get_height() ).should_be_equal_to( natural_1 );
 
 		// node 30
 		traverser.move_one_step_up();
 		traverser.move_one_step_down_right();
-		This( traverser ).should_not_be_empty();
-		This( traverser.get_node()->get_height() ).should_be_equal_to( natural_1 );
+		Cule_this( traverser ).should_not_be_empty();
+		Cule_this( traverser.get_node()->get_height() ).should_be_equal_to( natural_1 );
 
 		return typeing::True;
 	}
@@ -165,62 +165,62 @@ public:
 		traversing::Avl_tree_traverser< typeing::Memory_natural > traverser = avl_tree->find( natural_40 );
 
 		// root node 40
-		This( traverser ).should_not_be_empty();
-		This( traverser.get_object() ).should_be_equal_to( natural_40 );
-		This( traverser.get_node()->get_left_child() ).should_not_be_empty();
-		This( traverser.get_node()->get_left_child()->get_object() ).should_be_equal_to( natural_20 );
-		This( traverser.get_node()->get_right_child() ).should_not_be_empty();
-		This( traverser.get_node()->get_right_child()->get_object() ).should_be_equal_to( natural_60 );
+		Cule_this( traverser ).should_not_be_empty();
+		Cule_this( traverser.get_object() ).should_be_equal_to( natural_40 );
+		Cule_this( traverser.get_node()->get_left_child() ).should_not_be_empty();
+		Cule_this( traverser.get_node()->get_left_child()->get_object() ).should_be_equal_to( natural_20 );
+		Cule_this( traverser.get_node()->get_right_child() ).should_not_be_empty();
+		Cule_this( traverser.get_node()->get_right_child()->get_object() ).should_be_equal_to( natural_60 );
 
 		// node 20
 		traverser.move_one_step_down_left();
-		This( traverser ).should_not_be_empty();
-		This( traverser.get_object() ).should_be_equal_to( natural_20 );
-		This( traverser.get_node()->get_left_child() ).should_not_be_empty();
-		This( traverser.get_node()->get_left_child()->get_object() ).should_be_equal_to( natural_10 );
-		This( traverser.get_node()->get_right_child() ).should_not_be_empty();
-		This( traverser.get_node()->get_right_child()->get_object() ).should_be_equal_to( natural_30 );
+		Cule_this( traverser ).should_not_be_empty();
+		Cule_this( traverser.get_object() ).should_be_equal_to( natural_20 );
+		Cule_this( traverser.get_node()->get_left_child() ).should_not_be_empty();
+		Cule_this( traverser.get_node()->get_left_child()->get_object() ).should_be_equal_to( natural_10 );
+		Cule_this( traverser.get_node()->get_right_child() ).should_not_be_empty();
+		Cule_this( traverser.get_node()->get_right_child()->get_object() ).should_be_equal_to( natural_30 );
 
 		// node 10
 		traverser.move_one_step_down_left();
-		This( traverser ).should_not_be_empty();
-		This( traverser.get_object() ).should_be_equal_to( natural_10 );
-		This( traverser.get_node()->get_left_child() ).should_be_empty();
-		This( traverser.get_node()->get_right_child() ).should_be_empty();
+		Cule_this( traverser ).should_not_be_empty();
+		Cule_this( traverser.get_object() ).should_be_equal_to( natural_10 );
+		Cule_this( traverser.get_node()->get_left_child() ).should_be_empty();
+		Cule_this( traverser.get_node()->get_right_child() ).should_be_empty();
 
 		// node 30
 		traverser.move_one_step_up();
 		traverser.move_one_step_down_right();
-		This( traverser ).should_not_be_empty();
-		This( traverser.get_object() ).should_be_equal_to( natural_30 );
-		This( traverser.get_node()->get_left_child() ).should_be_empty();
-		This( traverser.get_node()->get_right_child() ).should_be_empty();
+		Cule_this( traverser ).should_not_be_empty();
+		Cule_this( traverser.get_object() ).should_be_equal_to( natural_30 );
+		Cule_this( traverser.get_node()->get_left_child() ).should_be_empty();
+		Cule_this( traverser.get_node()->get_right_child() ).should_be_empty();
 
 		// node 60
 		traverser.move_one_step_up();
 		traverser.move_one_step_up();
 		traverser.move_one_step_down_right();
-		This( traverser ).should_not_be_empty();
-		This( traverser.get_object() ).should_be_equal_to( natural_60 );
-		This( traverser.get_node()->get_left_child() ).should_not_be_empty();
-		This( traverser.get_node()->get_left_child()->get_object() ).should_be_equal_to( natural_50 );
-		This( traverser.get_node()->get_right_child() ).should_not_be_empty();
-		This( traverser.get_node()->get_right_child()->get_object() ).should_be_equal_to( natural_70 );
+		Cule_this( traverser ).should_not_be_empty();
+		Cule_this( traverser.get_object() ).should_be_equal_to( natural_60 );
+		Cule_this( traverser.get_node()->get_left_child() ).should_not_be_empty();
+		Cule_this( traverser.get_node()->get_left_child()->get_object() ).should_be_equal_to( natural_50 );
+		Cule_this( traverser.get_node()->get_right_child() ).should_not_be_empty();
+		Cule_this( traverser.get_node()->get_right_child()->get_object() ).should_be_equal_to( natural_70 );
 
 		// node 50
 		traverser.move_one_step_down_left();
-		This( traverser ).should_not_be_empty();
-		This( traverser.get_object() ).should_be_equal_to( natural_50 );
-		This( traverser.get_node()->get_left_child() ).should_be_empty();
-		This( traverser.get_node()->get_right_child() ).should_be_empty();
+		Cule_this( traverser ).should_not_be_empty();
+		Cule_this( traverser.get_object() ).should_be_equal_to( natural_50 );
+		Cule_this( traverser.get_node()->get_left_child() ).should_be_empty();
+		Cule_this( traverser.get_node()->get_right_child() ).should_be_empty();
 
 		// node 70
 		traverser.move_one_step_up();
 		traverser.move_one_step_down_right();
-		This( traverser ).should_not_be_empty();
-		This( traverser.get_object() ).should_be_equal_to( natural_70 );
-		This( traverser.get_node()->get_left_child() ).should_be_empty();
-		This( traverser.get_node()->get_right_child() ).should_be_empty();
+		Cule_this( traverser ).should_not_be_empty();
+		Cule_this( traverser.get_object() ).should_be_equal_to( natural_70 );
+		Cule_this( traverser.get_node()->get_left_child() ).should_be_empty();
+		Cule_this( traverser.get_node()->get_right_child() ).should_be_empty();
 
 		return typeing::True;
 	}
@@ -229,48 +229,48 @@ public:
 		traversing::Avl_tree_traverser< typeing::Memory_natural > traverser = avl_tree->find( natural_40 );
 
 		// root node 40
-		This( traverser ).should_not_be_empty();
-		This( traverser.get_node()->get_parent() ).should_be_empty();
+		Cule_this( traverser ).should_not_be_empty();
+		Cule_this( traverser.get_node()->get_parent() ).should_be_empty();
 
 		// node 20
 		traverser.move_one_step_down_left();
-		This( traverser ).should_not_be_empty();
-		This( traverser.get_node()->get_parent() ).should_not_be_empty();
-		This( traverser.get_node()->get_parent()->get_object() ).should_be_equal_to( natural_40 );
+		Cule_this( traverser ).should_not_be_empty();
+		Cule_this( traverser.get_node()->get_parent() ).should_not_be_empty();
+		Cule_this( traverser.get_node()->get_parent()->get_object() ).should_be_equal_to( natural_40 );
 
 		// node 10
 		traverser.move_one_step_down_left();
-		This( traverser ).should_not_be_empty();
-		This( traverser.get_node()->get_parent() ).should_not_be_empty();
-		This( traverser.get_node()->get_parent()->get_object() ).should_be_equal_to( natural_20 );
+		Cule_this( traverser ).should_not_be_empty();
+		Cule_this( traverser.get_node()->get_parent() ).should_not_be_empty();
+		Cule_this( traverser.get_node()->get_parent()->get_object() ).should_be_equal_to( natural_20 );
 
 		// node 30
 		traverser.move_one_step_up();
 		traverser.move_one_step_down_right();
-		This( traverser ).should_not_be_empty();
-		This( traverser.get_node()->get_parent() ).should_not_be_empty();
-		This( traverser.get_node()->get_parent()->get_object() ).should_be_equal_to( natural_20 );
+		Cule_this( traverser ).should_not_be_empty();
+		Cule_this( traverser.get_node()->get_parent() ).should_not_be_empty();
+		Cule_this( traverser.get_node()->get_parent()->get_object() ).should_be_equal_to( natural_20 );
 
 		// node 60
 		traverser.move_one_step_up();
 		traverser.move_one_step_up();
 		traverser.move_one_step_down_right();
-		This( traverser ).should_not_be_empty();
-		This( traverser.get_node()->get_parent() ).should_not_be_empty();
-		This( traverser.get_node()->get_parent()->get_object() ).should_be_equal_to( natural_40 );
+		Cule_this( traverser ).should_not_be_empty();
+		Cule_this( traverser.get_node()->get_parent() ).should_not_be_empty();
+		Cule_this( traverser.get_node()->get_parent()->get_object() ).should_be_equal_to( natural_40 );
 
 		// node 50
 		traverser.move_one_step_down_left();
-		This( traverser ).should_not_be_empty();
-		This( traverser.get_node()->get_parent() ).should_not_be_empty();
-		This( traverser.get_node()->get_parent()->get_object() ).should_be_equal_to( natural_60 );
+		Cule_this( traverser ).should_not_be_empty();
+		Cule_this( traverser.get_node()->get_parent() ).should_not_be_empty();
+		Cule_this( traverser.get_node()->get_parent()->get_object() ).should_be_equal_to( natural_60 );
 
 		// node 70
 		traverser.move_one_step_up();
 		traverser.move_one_step_down_right();
-		This( traverser ).should_not_be_empty();
-		This( traverser.get_node()->get_parent() ).should_not_be_empty();
-		This( traverser.get_node()->get_parent()->get_object() ).should_be_equal_to( natural_60 );
+		Cule_this( traverser ).should_not_be_empty();
+		Cule_this( traverser.get_node()->get_parent() ).should_not_be_empty();
+		Cule_this( traverser.get_node()->get_parent()->get_object() ).should_be_equal_to( natural_60 );
 
 		return typeing::True;
 	}
@@ -279,42 +279,42 @@ public:
 		traversing::Avl_tree_traverser< typeing::Memory_natural > traverser = avl_tree->find( natural_40 );
 
 		// root node 40
-		This( traverser ).should_not_be_empty();
-		This( traverser.get_node()->get_height() ).should_be_equal_to( natural_3 );
+		Cule_this( traverser ).should_not_be_empty();
+		Cule_this( traverser.get_node()->get_height() ).should_be_equal_to( natural_3 );
 
 		// node 20
 		traverser.move_one_step_down_left();
-		This( traverser ).should_not_be_empty();
-		This( traverser.get_node()->get_height() ).should_be_equal_to( natural_2 );
+		Cule_this( traverser ).should_not_be_empty();
+		Cule_this( traverser.get_node()->get_height() ).should_be_equal_to( natural_2 );
 
 		// node 10
 		traverser.move_one_step_down_left();
-		This( traverser ).should_not_be_empty();
-		This( traverser.get_node()->get_height() ).should_be_equal_to( natural_1 );
+		Cule_this( traverser ).should_not_be_empty();
+		Cule_this( traverser.get_node()->get_height() ).should_be_equal_to( natural_1 );
 
 		// node 30
 		traverser.move_one_step_up();
 		traverser.move_one_step_down_right();
-		This( traverser ).should_not_be_empty();
-		This( traverser.get_node()->get_height() ).should_be_equal_to( natural_1 );
+		Cule_this( traverser ).should_not_be_empty();
+		Cule_this( traverser.get_node()->get_height() ).should_be_equal_to( natural_1 );
 
 		// node 60
 		traverser.move_one_step_up();
 		traverser.move_one_step_up();
 		traverser.move_one_step_down_right();
-		This( traverser ).should_not_be_empty();
-		This( traverser.get_node()->get_height() ).should_be_equal_to( natural_2 );
+		Cule_this( traverser ).should_not_be_empty();
+		Cule_this( traverser.get_node()->get_height() ).should_be_equal_to( natural_2 );
 
 		// node 50
 		traverser.move_one_step_down_left();
-		This( traverser ).should_not_be_empty();
-		This( traverser.get_node()->get_height() ).should_be_equal_to( natural_1 );
+		Cule_this( traverser ).should_not_be_empty();
+		Cule_this( traverser.get_node()->get_height() ).should_be_equal_to( natural_1 );
 
 		// node 70
 		traverser.move_one_step_up();
 		traverser.move_one_step_down_right();
-		This( traverser ).should_not_be_empty();
-		This( traverser.get_node()->get_height() ).should_be_equal_to( natural_1 );
+		Cule_this( traverser ).should_not_be_empty();
+		Cule_this( traverser.get_node()->get_height() ).should_be_equal_to( natural_1 );
 
 		return typeing::True;
 	}
@@ -386,31 +386,31 @@ public:
 
 	typeing::Boolean all_nodes_are_inplace_except( const typeing::Memory_natural an_object ) {
 		if ( an_object != natural_10 ) {
-			This( avl_tree->find( natural_10 ).get_object() ).should_be_equal_to( natural_10 );
+			Cule_this( avl_tree->find( natural_10 ).get_object() ).should_be_equal_to( natural_10 );
 		}
 
 		if ( an_object != natural_20 ) {
-			This( avl_tree->find( natural_20 ).get_object() ).should_be_equal_to( natural_20 );
+			Cule_this( avl_tree->find( natural_20 ).get_object() ).should_be_equal_to( natural_20 );
 		}
 
 		if ( an_object != natural_30 ) {
-			This( avl_tree->find( natural_30 ).get_object() ).should_be_equal_to( natural_30 );
+			Cule_this( avl_tree->find( natural_30 ).get_object() ).should_be_equal_to( natural_30 );
 		}
 
 		if ( an_object != natural_40 ) {
-			This( avl_tree->find( natural_40 ).get_object() ).should_be_equal_to( natural_40 );
+			Cule_this( avl_tree->find( natural_40 ).get_object() ).should_be_equal_to( natural_40 );
 		}
 
 		if ( an_object != natural_50 ) {
-			This( avl_tree->find( natural_50 ).get_object() ).should_be_equal_to( natural_50 );
+			Cule_this( avl_tree->find( natural_50 ).get_object() ).should_be_equal_to( natural_50 );
 		}
 
 		if ( an_object != natural_60 ) {
-			This( avl_tree->find( natural_60 ).get_object() ).should_be_equal_to( natural_60 );
+			Cule_this( avl_tree->find( natural_60 ).get_object() ).should_be_equal_to( natural_60 );
 		}
 
 		if ( an_object != natural_70 ) {
-			This( avl_tree->find( natural_70 ).get_object() ).should_be_equal_to( natural_70 );
+			Cule_this( avl_tree->find( natural_70 ).get_object() ).should_be_equal_to( natural_70 );
 		}
 
 		return typeing::True;

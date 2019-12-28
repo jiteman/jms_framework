@@ -33,10 +33,10 @@ CULE_TEST( cWeak, should_delete_empty ) {
 CULE_TEST( cWeak, should_be_equal_empty_empty ) {
 	const cWeak< testing::Pointing_testing_class > empty_cweak;
 
-	This( cWeak< testing::Pointing_testing_class >() ).should_be_equal_to( cWeak< testing::Pointing_testing_class >() );
-	This( empty_cweak ).should_be_equal_to( empty_cweak );
-	This( empty_cweak ).should_be_equal_to( cWeak< testing::Pointing_testing_class >() );
-	This( cWeak< testing::Pointing_testing_class >() ).should_be_equal_to( empty_cweak );
+	Cule_this( cWeak< testing::Pointing_testing_class >() ).should_be_equal_to( cWeak< testing::Pointing_testing_class >() );
+	Cule_this( empty_cweak ).should_be_equal_to( empty_cweak );
+	Cule_this( empty_cweak ).should_be_equal_to( cWeak< testing::Pointing_testing_class >() );
+	Cule_this( cWeak< testing::Pointing_testing_class >() ).should_be_equal_to( empty_cweak );
 }
 
 CULE_TEST( cWeak, should_copy_empty ) {
@@ -138,10 +138,10 @@ CULE_TEST( cWeak, should_be_equal_equally_filled ) {
 	const cWeak< testing::Pointing_testing_class > filled_cweak = filled_cshared.get_as_cweak();
 	const cWeak< testing::Pointing_testing_class > filled_cweak_1 = filled_cshared.get_as_cweak();
 
-	This( filled_cweak ).should_be_equal_to( filled_cweak );
-	This( filled_cweak ).should_be_equal_to( filled_cweak_1 );
-	This( filled_cweak_1 ).should_be_equal_to( filled_cweak );
-	This( filled_cweak_1 ).should_be_equal_to( filled_cweak_1 );
+	Cule_this( filled_cweak ).should_be_equal_to( filled_cweak );
+	Cule_this( filled_cweak ).should_be_equal_to( filled_cweak_1 );
+	Cule_this( filled_cweak_1 ).should_be_equal_to( filled_cweak );
+	Cule_this( filled_cweak_1 ).should_be_equal_to( filled_cweak_1 );
 }
 
 CULE_TEST( cWeak, should_not_be_equal_differently_filled ) {
@@ -151,10 +151,10 @@ CULE_TEST( cWeak, should_not_be_equal_differently_filled ) {
 	const cWeak< testing::Pointing_testing_class > filled_cweak = filled_cshared.get_as_cweak();
 	const cWeak< testing::Pointing_testing_class > filled_cweak_1 = filled_cshared_1.get_as_cweak();
 
-	This( filled_cweak ).should_be_equal_to( filled_cweak );
-	This( filled_cweak ).should_not_be_equal_to( filled_cweak_1 );
-	This( filled_cweak_1 ).should_not_be_equal_to( filled_cweak );
-	This( filled_cweak_1 ).should_be_equal_to( filled_cweak_1 );
+	Cule_this( filled_cweak ).should_be_equal_to( filled_cweak );
+	Cule_this( filled_cweak ).should_not_be_equal_to( filled_cweak_1 );
+	Cule_this( filled_cweak_1 ).should_not_be_equal_to( filled_cweak );
+	Cule_this( filled_cweak_1 ).should_be_equal_to( filled_cweak_1 );
 }
 
 CULE_TEST( cWeak, should_copy ) {
