@@ -4,6 +4,7 @@
 #include "cule_Allocators.h"
 #include "executing/Test_runner.h"
 #include "user_interfacing/Ui_output.h"
+#include "user_interfacing/Console_ui_output_threaded.h"
 #include "user_interfacing/Console_ui_output.h"
 #include "user_interfacing/Debug_ui_output.h"
 
@@ -14,6 +15,9 @@
 #include "jmsf/patterning/Singleton.hin"
 
 #include "jmsf/memorying/Constructor.hin"
+
+
+#include "jmsf/synchronizing/Event.h"
 
 
 //#include "jmsf/validating/error_debug_output.h"
@@ -32,16 +36,16 @@ int cule_real_main( pointing::Shared< user_interfaces::Ui_output > &uiOutput );
 
 
 int cule_main_console() {
-//	pointing::Pointer< user_interfaces::UiOutput > ui_output =
-//		pointing::Pointer< user_interfaces::UiOutput >::create_shared(
+//	pointing::Shared< user_interfaces::Ui_output > ui_output =
+//		pointing::Shared< user_interfaces::Ui_output >::create(
 //			cule_Allocators::instance()->get_reference_counters_allocator(),
-//			memorying::Constructor< user_interfaces::UiOutput, user_interfaces::TextOutputUi >::construct(
-//				cule_Allocators::instance()->_get_subsystem_allocator() ) );
+//			memorying::Constructor< user_interfaces::Ui_output, user_interfaces::Console_ui_output >::construct(
+//				cule_Allocators::instance()->get_subsystem_allocator() ) );
 
 	pointing::Shared< user_interfaces::Ui_output > ui_output =
 		pointing::Shared< user_interfaces::Ui_output >::create(
 			cule_Allocators::instance()->get_reference_counters_allocator(),
-			memorying::Constructor< user_interfaces::Ui_output, user_interfaces::Console_ui_output >::construct(
+			memorying::Constructor< user_interfaces::Ui_output, user_interfaces::Console_ui_output_threaded >::construct(
 				cule_Allocators::instance()->get_subsystem_allocator() ) );
 
 //	pointing::Shared< user_interfaces::Ui_output > ui_output =
