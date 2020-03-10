@@ -17,6 +17,7 @@ if ( UNIX )
 	set( ${PROJECT_NAME}_CXX_FLAGS ${CMAKE_CXX_FLAGS} )
 
 	## list( APPEND ${PROJECT_NAME}_CXX_FLAGS "-W" ) #
+	list( APPEND ${PROJECT_NAME}_CXX_FLAGS "-Wno-restrict" ) #
 
 	string( REPLACE ";" " " ${PROJECT_NAME}_CXX_FLAGS_STR "${${PROJECT_NAME}_CXX_FLAGS}" )
 

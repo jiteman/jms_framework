@@ -67,6 +67,15 @@ if ( WIN32 )
 		ms_windows )
 endif()
 
+if( UNIX )
+	list( APPEND ${PROJECT_NAME}_DEPENDENCY_LIBS_VAR
+		"pthread" )
+elseif ( WIN32 )
+	list( APPEND ${PROJECT_NAME}_DEPENDENCY_LIBS_VAR
+		${ms_windows_DEPENDENCY_LIBS}
+		ms_windows )
+endif()
+
 list( REMOVE_DUPLICATES ${PROJECT_NAME}_DEPENDENCY_LIBS_VAR )
 target_link_libraries( ${PROJECT_NAME} ${${PROJECT_NAME}_DEPENDENCY_LIBS_VAR} )
 

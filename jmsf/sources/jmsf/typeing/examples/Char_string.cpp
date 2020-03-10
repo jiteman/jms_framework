@@ -8,8 +8,8 @@
 #include "jmsf/validating/Should.h"
 #include "jmsf/validating/File_and_line.h"
 
-#include <stdio.h>
-#include <string.h>
+#include <cstdio>
+#include <cstring>
 
 
 namespace jmsf {
